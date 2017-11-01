@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7 no-js"> <![endif]-->
+<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7 no-js"> <![endif]-->
+<!--[if IE 8]>     <html class="ie ie8 lte9 lte8 no-js">      <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9 lte9 no-js">           <![endif]-->
+<!--[if gt IE 9]>  <html class="no-js">                       <![endif]-->
+<!--[if !IE]><!--> <html class="no-js">                       <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>后台管理</title>
+
+    <!-- // IOS webapp icons // -->
+    
+    <meta name="apple-mobile-web-app-title" content="Karma Webapp">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/mobile/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/mobile/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/mobile/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/mobile/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/mobile/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/mobile/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/mobile/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" />
+    
+    <!-- // IOS webapp splash screens // -->
+    
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
+          href="/images/mobile/apple-touch-startup-image-1536x2008.png"/>
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
+          href="/images/mobile/apple-touch-startup-image-1496x2048.png"/>     
+ 	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)"
+          href="/images/mobile/apple-touch-startup-image-768x1004.png"/>
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)"
+          href="/images/mobile/apple-touch-startup-image-748x1024.png"/>
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" 
+          href="/images/mobile/apple-touch-startup-image-640x1096.png"/>    
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+          href="/images/mobile/apple-touch-startup-image-640x920.png"/>    
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
+          href="/images/mobile/apple-touch-startup-image-320x460.png"/>    
+    
+    <!-- // Windows 8 tile // -->
+    
+    <meta name="application-name" content="Karma Webapp">
+    <meta name="msapplication-TileColor" content="#333333" />
+	<meta name="msapplication-TileImage" content="images/mobile/windows8-icon.png" />
+
+    <!-- // Handheld devices misc // -->
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    
+    <!-- // Stylesheets // -->
+    
+    <link rel="stylesheet" href="bootstrap/core/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/select2/select2.css"/>
+    <link rel="stylesheet" href="bootstrap/datepicker/css/datepicker.css"/>
+    <link rel="stylesheet" href="bootstrap/fileupload/bootstrap-fileupload.min.css"/>
+    <link rel="stylesheet" href="bootstrap/typeahead/typeahead.min.css"/>
+    <link rel="stylesheet" href="bootstrap/colorpicker/css/colorpicker.css"/>
+    <link rel="stylesheet" href="bootstrap/timepicker/css/bootstrap-timepicker.min.css"/>
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-custom.css"/>
+    <link rel="stylesheet" href="css/bootstrap-extended.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/helpers.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/light-theme.css"/>
+    <link rel="stylesheet" href="css/mediaqueries.css"/>
+    
+    <!-- // Helpers // -->
+    
+    <script src="js/plugins/modernizr.min.js"></script> 
+    <script src="js/plugins/mobiledevices.js"></script>
+    
+    <!-- // jQuery core // -->
+    
+    <script src="js/libs/jquery-1.11.0.min.js"></script>
+    <script src="js/libs/jquery-ui-1.10.4.min.js"></script>
+    
+    <!-- // Bootstrap // -->
+    
+    <script src="bootstrap/core/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap/select2/select2.min.js"></script>
+	<script src="bootstrap/bootboxjs/bootboxjs.min.js"></script>
+    <script src="bootstrap/holder/holder.min.js"></script>
+    <script src="bootstrap/typeahead/typeahead.min.js"></script>
+	<script src="bootstrap/datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="bootstrap/fileupload/bootstrap-fileupload.min.js"></script>
+	<script src="bootstrap/inputmask/bootstrap-inputmask.min.js"></script>
+    <script src="bootstrap/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+    <script src="bootstrap/timepicker/js/bootstrap-timepicker.min.js"></script>
+    
+    <!-- // Custom/premium plugins // -->
+    
+    <script src="js/plugins/responsivetables.1.0.min.js"></script> 
+    <script src="js/plugins/responsivehelper.1.0.min.js"></script>  
+    <script src="js/plugins/mainmenu.1.0.min.js"></script>
+    <script src="js/plugins/easyfiletree.1.0.min.js"></script> 
+  	<script src="js/plugins/autosaveforms.1.0.min.js"></script> 
+    <script src="js/plugins/chainedinputs.1.0.min.js"></script>
+	<script src="js/plugins/checkboxtoggle.1.0.min.js"></script> 
+    <script src="js/plugins/bootstraptabsextend.1.0.min.js"></script>
+    <script src="js/plugins/lockscreen.1.0.min.js"></script>
+    <script src="js/plugins/autoexpand.1.0.min.js"></script>
+    <script src="js/plugins/notify.1.0.min.js"></script>
+ 	<script src="js/plugins/nanogress.1.0.min.js"></script>
+    <script src="js/plugins/powerwizard.1.0.min.js"></script>
+    <script src="js/plugins/simpleselect.1.0.min.js"></script>
+    <script src="js/plugins/tinycontextmenu.1.0.min.js"></script>
+      
+    <!-- // Third-party plugins // -->
+    
+    <script src="js/plugins/tinyscrollbar.min.js"></script>  
+    <script src="js/plugins/jquery.knob.js"></script> 
+    <script src="js/plugins/prism.min.js"></script>            
+    <script src="js/plugins/h5f.min.js"></script>
+<!--    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script> -->
+    <script src="js/plugins/gmap3.min.js"></script>
+    <script src="js/plugins/jquery.tablesorter.min.js"></script>
+    <script src="js/plugins/jquery.tablesorter.widgets.min.js"></script>
+    <script src="js/plugins/jquery.tablesorter.pager.min.js"></script>
+    <script src="js/plugins/fullcalendar.min.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/plugins/hogan-2.0.0.js"></script>
+    <script src="js/plugins/jquery.nouislider.min.js"></script>
+    <script src="js/plugins/jquery.autosize-min.js"></script>
+    <script src="js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins/jquery.pwstrength.min.js"></script>
+    <script src="js/plugins/jquery.mixitup.min.js"></script>
+    <script src="js/plugins/jquery.vticker.min.js"></script>
+    <script src="js/flot/jquery.flot.min.js"></script>
+    <script src="js/flot/jquery.flot.resize.min.js"></script>
+    <script src="js/flot/excanvas.min.js"></script>
+    <script src="js/plugins/layout.min.js"></script>
+    <script src="js/plugins/masonry.pkgd.min.js"></script>
+    <script src="js/plugins/json2.js"></script>
+    
+    <!-- // Custom //-->
+    
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/plugins/demo.js"></script>
+    <script src="js/plugins/main.js"></script>    
+     
+</head>
+<body> 
+	<div id="container" class="clearfix">
+
+    <!-- ******************************************** 
+         * SIDEBAR MAIN:                            *
+         *                                          *
+         * the part which contains the main         *
+         * navigation, logo, search and more...     *
+         * (parts can be in both sidebars).         *
+         ******************************************** -->
+                   
+		<aside id="sidebar-main" class="sidebar">
+            
+        	<div class="sidebar-logo">
+            	<a href="index.html" id="logo-big"><h1>后台系统管理</h1><h2>DEMO门户页面</h2></a>
+            </div><!-- End .sidebar-logo -->
+
+            <!-- ********** -->
+            <!-- NEW MODULE -->
+            <!-- ********** -->
+                    
+            <div class="sidebar-module"> 
+                <div class="sidebar-profile">
+                    <img src="images/users/user-1.jpg" alt="" class="avatar"/>
+                    <span class="indicator-dot">2</span>
+                    <ul class="sidebar-profile-list">
+                        <li><h3>上午好, 王丽丽</h3></li>
+                        <li><a href="#">个人资料</a>  | <a href="#">通知</a> | <a href="#">注销</a></li>
+                    </ul>
+                </div><!-- End .sidebar-profile -->
+            </div><!-- End .sidebar-module --> 
+                    
+            <div class="sidebar-line"><!-- A seperator line --></div>
+            
+            <!-- * Tabs can be removed, if so dont forget * -->
+            <!-- * to remove the .tab-pane divs(wrapper). * -->
+             
+            <ul class="ext-tabs-sidebar">
+                <li class="active">
+                    <a href="#sidebar-tab-1"><i class="fa fa-bars"></i> 面板导航</a>
+                </li>
+                <li>
+                    <a href="#sidebar-tab-2"><i class="fa fa-folder"></i> 树状导航</a>
+                </li>            
+            </ul><!-- End .ext-tabs-sidebar -->
+            <div class="tab-content">
+                <div id="sidebar-tab-1" class="tab-pane active clearfix">
+                
+                    <!-- ********** -->
+                    <!-- NEW MODULE -->
+                    <!-- ********** -->
+                    
+                    <div class="sidebar-module"> 
+                        <nav class="sidebar-nav-v2">                         
+                            <ul>
+                                <li class="page-arrow active-page">
+                                    <a href="index.html"><i class="fa fa-dashboard"></i> 仪表盘 <span class="indicator-pill">32</span></a>
+                                </li>
+                                <li>
+                                    <a href="statistics.html"><i class="fa fa-sun-o"></i> 统计汇总<span class="indicator-dot">2</span></a>
+                                </li>
+                                <li>
+                                    <a href="charts.html"><i class="fa fa-bar-chart-o"></i> 图表</a>
+                                </li>
+                                <li>
+                                    <a href="calendar.html"><i class="fa fa-calendar-o"></i> 日历</a>
+                                </li>                 
+                                <li>
+                                    <a href="#"><i class="fa fa-envelope-o"></i> 表单元素 <i class="fa fa-caret-left pull-right"></i></a>
+                                    
+                                    <!-- * sub menu * -->
+                                    <ul>
+                                        <li>
+                                            <a href="forms.html">Forms</a>
+                                        </li> 
+                                        <li>
+                                            <a href="forgot.html">Forgot Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="login.html">Login Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="login2.html">Login 2 Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="reset.html">Reset Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="signup.html">Signup Form</a>
+                                        </li>
+                                        <li>
+                                            <a href="wizard.html">Wizard</a>
+                                        </li>  
+                                        <li>
+                                            <a href="wysiwyg.html">WYSIWYG</a>
+                                        </li>                                                          
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-file-o"></i> 页面 <i class="fa fa-caret-left pull-right"></i></a>
+                                                            
+                                    <!-- * sub menu * -->
+                                    <ul>
+                                        <li>
+                                            <a href="#">Billing</a>
+                                        </li>                          
+                                        <li>
+                                            <a href="comments.html">Comments</a>
+                                        </li> 
+                                        <li>
+                                            <a href="clients.html">Clients</a>
+                                        </li>
+                                        <li>
+                                            <a href="faqs.html">FAQs</a>
+                                        </li> 
+                                        <li>
+                                            <a href="files.html">Files</a>
+                                        </li> 
+                                        <li>
+                                            <a href="planning.html">Planning</a>
+                                        </li>  
+                                        <li>
+                                            <a href="#">Social</a>
+                                        </li>  
+                                        <li>
+                                            <a href="ticketsupport.html">Ticket Support</a>
+                                        </li>
+                                        <li>
+                                            <a href="timeline.html">Timeline</a>
+                                        </li>
+                                        <li>
+                                            <a href="wiki.html">Wiki</a>
+                                        </li>                                                                                        
+                                    </ul>
+                                </li>                         
+                                <li>
+                                    <a href="#"><i class="fa fa-star-o"></i> UI界面元素<i class="fa fa-caret-left pull-right"></i></a>
+                                    
+                                    <!-- * sub menu * -->
+                                    <ul>                            
+                                        <li>
+                                            <a href="buttonsandicons.html">Buttons &amp; Icons</a>
+                                        </li>
+                                        <li>
+                                            <a href="notifications.html">Notifications</a>
+                                        </li>                                    
+                                        <li>
+                                            <a href="dropdownmenu.html">Dropdown &amp; Menu</a>
+                                        </li> 
+                                        <li>
+                                            <a href="misc.html">Misc</a>
+                                        </li>  
+                                        <li>
+                                            <a href="tabs.html">Tabs</a>
+                                        </li>
+                                        <li>
+                                            <a href="toolbars.html">Toolbars</a>
+                                        </li>                                                                                                                         
+                                    </ul>
+                                </li>
+                                <li class="seperator"><!-- * seperator line * --></li>
+                                <li>
+                                    <a href="media.html"><i class="fa fa-picture-o"></i> 媒体</a>
+                                </li>
+                                <li>
+                                    <a href="modules.html"><i class="fa fa-wrench"></i> 模块</a>
+                                </li>                      
+                                <li>
+                                    <a href="tables.html"><i class="fa fa-table"></i> 表格</a>
+                                </li>                           
+                                <li>
+                                    <a href="pagelayout.html"><i class="fa fa-th"></i> 页面布局</a>
+                                </li>                     
+                                <li>
+                                    <a href="#"><i class="fa fa-warning"></i> 错误页面 <i class="fa fa-caret-left pull-right"></i></a>
+                                    
+                                    <!-- * sub menu * -->
+                                    <ul>                            
+                                        <li>
+                                            <a href="400.html">400</a>
+                                        </li>
+                                        <li>
+                                            <a href="401.html">401</a>
+                                        </li>
+                                        <li>
+                                            <a href="403.html">403</a>
+                                        </li>
+                                        <li>
+                                            <a href="404.html">404</a>
+                                        </li>
+                                        <li>
+                                            <a href="500.html">500</a>
+                                        </li>
+                                        <li>
+                                            <a href="503.html">503</a>
+                                        </li>                                                                                                                  
+                                    </ul>
+                                    
+                                </li>
+                            	<li class="menu-label">
+                               		<div class="spacer-20"></div>
+                                	其实分组元素
+                                    <div class="spacer-10"></div>
+                                </li> 
+                                <li>
+                                    <a href="maps.html"><i class="fa fa-map-marker"></i> 地图</a>
+                                </li> 
+                                <li>
+                                    <a href="widgets.html"><i class="fa fa-columns"></i> 小部件</a>
+                                </li> 
+                                <li>
+                                    <a href="sitemap.html"><i class="fa fa-sitemap"></i> 站点地图</a>
+                                </li>                                                                                                                   
+                            </ul>
+                        </nav><!-- End .sidebar-nav-v1 --> 
+             		</div><!-- End .sidebar-module -->                                     
+                </div>                
+            	<div id="sidebar-tab-2" class="tab-pane clearfix">
+                
+                    <!-- ********** -->
+                    <!-- NEW MODULE -->
+                    <!-- ********** -->
+	                        
+                    <div class="sidebar-module"> 
+                        <ul class="easyfiletree">
+                            <li class="eft-open"><i class="fa fa-folder-open"></i>Folder 1
+                                <ul>
+                                    <li><i class="fa fa-file-text"></i>Item 1.1</li>
+                                    <li><i class="fa fa-file"></i>Item 1.2</li>
+                                    <li><i class="fa fa-link"></i><a href="#">Item 1.3 (link)</a></li>
+                                </ul>
+                            </li>
+                            <li class="eft-open"><i class="fa fa-folder-open"></i>Folder 2
+                                <ul>
+                                    <li class="eft-open"><i class="fa fa-folder-open"></i>Subfolder 2.1
+                                        <ul>
+                                            <li><i class="fa fa-file"></i>File 2.1.1</li>
+                                            <li><i class="fa fa-picture-o"></i>File 2.1.2</li>
+                                        </ul>
+                                    </li>
+                                    <li><i class="fa fa-file"></i>File 2.2</li>
+                                </ul>
+                            </li>
+                            <li class="eft-closed"><i class="fa fa-folder"></i>Folder 3 (closed)
+                                <ul>
+                                    <li><i class="fa fa-file"></i>File 3.1</li>
+                                </ul>
+                            </li>
+                            <li><i class="fa fa-link"></i><a href="#">File 4 (link)</a></li>
+                            <li><i class="fa fa-file-text"></i>File 5</li>
+                            <li><i class="fa fa-file"></i>File 6</li>
+                        </ul>
+                    </div><!-- End .sidebar-module --> 
+                </div>
+            </div><!-- End .tab-content -->
+            
+            <div class="sidebar-line"><!-- A seperator line --></div>
+            
+            <div class="sidebar-heading" data-module-toggle="false"> 
+                <h3>
+                	里程碑  <small class="text-muted">/模块</small>
+                    <a href="#" class="pull-right"><i class="fa fa-gear"></i></a>
+                </h3>
+            </div>
+            
+            <!-- ********** -->
+            <!-- NEW MODULE -->
+            <!-- ********** -->
+                    
+            <div class="sidebar-module">
+                <div class="progress-project">
+                    <div class="progress-project-header">
+                        <h5>项目一：开发</h5><span>44<span class="text-muted">/55</span></span>
+                    </div>
+                    <div class="progress bar-small">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                            <span class="sr-only">90% Complete</span>
+                        </div>
+                    </div>
+                </div><!-- End .progress-project -->
+                <div class="spacer-20"></div>  
+                <div class="progress-project">
+                    <div class="progress-project-header">
+                        <h5>项目二：测试</h5><span>4<span class="text-muted">/10</span></span>
+                    </div>
+                    <div class="progress bar-small">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                            <span class="sr-only">20% Complete</span>
+                        </div>
+                    </div>
+                </div><!-- End .progress-project -->
+                <div class="spacer-20"></div>  
+                <div class="progress-project">
+                    <div class="progress-project-header">
+                        <h5>项目三：部署</h5><span>54<span class="text-muted">/88</span></span>
+                    </div>
+                    <div class="progress bar-small">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;">
+                            <span class="sr-only">78% Complete</span>
+                        </div>
+                    </div>
+                </div><!-- End .progress-project -->
+                <div class="spacer-20"></div> 
+                <div class="progress-project">
+                    <div class="progress-project-header">
+                        <h5>项目四：运维</h5><span>4<span class="text-muted">/16</span></span>
+                    </div>
+                    <div class="progress bar-small">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%;">
+                            <span class="sr-only">28% Complete</span>
+                        </div>
+                    </div>
+                </div><!-- End .progress-project --> 
+                <div class="spacer-20"></div> 
+                <div class="progress-project">
+                    <div class="progress-project-header">
+                        <h5>项目五：客服</h5><span>50<span class="text-muted">/88</span></span>
+                    </div>
+                    <div class="progress bar-small">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                            <span class="sr-only">66% Complete</span>
+                        </div>
+                    </div>
+                </div><!-- End .progress-project -->
+            </div><!-- End .sidebar-module -->  
+                       
+            <div class="sidebar-line"><!-- A seperator line --></div>
+
+            <div class="sidebar-heading"> 
+                <h3>
+                	日历 <small class="text-muted">/模块</small>
+                </h3>
+            </div>
+            
+            <!-- ********** -->
+            <!-- NEW MODULE -->
+            <!-- ********** -->
+                    
+            <div class="sidebar-module">              
+                <div class="csscalendar-mini">	
+                    <table>
+                        <caption>2012 七月</caption>
+                        <thead>
+                            <tr>
+                                <th>周一</th>
+                                <th>周二</th>
+                                <th>周三</th>
+                                <th>周四</th>
+                                <th>周五</th>
+                                <th>周六</th>
+                                <th>周日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="off"><a href="">26</a></td>
+                                <td class="off"><a href="#">27</a></td>
+                                <td class="off"><a href="#">28</a></td>
+                                <td class="off"><a href="#">29</a></td>
+                                <td class="off"><a href="#">30</a></td>
+                                <td class="off"><a href="#">31</a></td>
+                                <td><a href="#">1</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">2</a></td>
+                                <td><a href="#">3</a></td>
+                                <td class="cal-app"><a href="#" class="tooltip-top" title="12:05 - Client X">4</a></td>
+                                <td><a href="#">5</a></td>
+                                <td><a href="#">6</a></td>
+                                <td><a href="#">7</a></td>
+                                <td><a href="#">8</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">9</a></td>
+                                <td><a href="#">10</a></td>
+                                <td><a href="#">11</a></td>
+                                <td><a href="#">12</a></td>
+                                <td><a href="#">13</a></td>
+                                <td><a href="#">14</a></td>
+                                <td><a href="#">15</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">16</a></td>
+                                <td><a href="#">17</a></td>
+                                <td><a href="#">18</a></td>
+                                <td><a href="#">19</a></td>
+                                <td class="cal-app"><a href="#" class="tooltip-top" title="16:15 - Launch website">20</a></td>
+                                <td><a href="#">21</a></td>
+                                <td><a href="#">22</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">23</a></td>
+                                <td><a href="#">24</a></td>
+                                <td><a href="#">25</a></td>
+                                <td><a href="#">26</a></td>
+                                <td><a href="#">27</a></td>
+                                <td class="active"><a href="#">28</a></td>
+                                <td><a href="#">29</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">30</a></td>
+                                <td><a href="#">31</a></td>
+                                <td class="off"><a href="#">1</a></td>
+                                <td class="off"><a href="#">2</a></td>
+                                <td class="off"><a href="#">3</a></td>
+                                <td class="off"><a href="#">4</a></td>
+                                <td class="off"><a href="#">5</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- End .csscalendar-mini -->  
+            	<div class="spacer-40"></div> 
+            	<h3>小贴士 <small class="text-muted">/可先模组</small></h3>
+                <div class="spacer-40"></div>  
+				<div class="example-box">
+                    <div class="example-box-header">
+                        <div class="example-label">CSStip</div>
+                    </div>
+                    <div class="inner-padding">
+                    <span class="csstip bold underline text-center block" title="This is an default csstip">Tooltip default</span>
+                    <div class="spacer-10"></div> 
+                    <span class="csstip tip-danger bold underline text-center block" title="This is an danger csstip">Tooltip danger</span>
+                    <div class="spacer-10"></div> 
+                    <span class="csstip tip-warning bold underline text-center block" title="This is an warning csstip">Tooltip warning</span>
+                    <div class="spacer-10"></div> 
+                    <span class="csstip tip-primary bold underline text-center block" title="This is an primary csstip">Tooltip primary</span>
+                    <div class="spacer-50"></div> 
+                    <span class="csstip tip-warning csstip-visible bold underline text-center block" title="I am always visible">Tooltip always visible</span>
+                    </div>
+                </div>  
+            </div><!-- End .sidebar-module --> 
+        </aside><!-- End aside --> 
+
+		<!-- ********************************************
+             * SIDEBAR SEC:                             *
+             *                                          *
+             * the part which contains things like      *
+             * calendar, users, lists, blocks and       *
+             * much more.                               *
+             ******************************************** -->
+        
+        <div id="sidebar-sec" class="sidebar"> 
+         
+        	<div class="sidebar-sec-top"></div> 
+                  
+            <!-- ********** -->
+            <!-- NEW MODULE -->
+            <!-- ********** -->
+                    
+            <div class="sidebar-module">               
+                <form class="input-group">
+                    <input type="text" name="" class="form-control" placeholder="输入搜索关键字..." id="typeahead-sidebar-search"/>
+                    <div class="input-group-btn">
+                    	<!-- can NOT be used with typeahead
+                        <a href="#" class="clear-input"><i class="fa fa-times-circle"></i></a>
+                        -->
+                        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div><!-- End .sidebar-module -->  
+            
+            <div class="sidebar-line"><!-- A seperator line --></div>
+
+            <!-- * Tabs can be removed, if so dont forget * -->
+            <!-- * to remove the .tab-pane divs(wrapper). * -->
+             
+            <ul class="ext-tabs-sidebar">
+                <li class="active">
+                    <a href="#sidebar-tab-3"><i class="fa fa-group"></i> 好友列表</a>
+                </li>
+                <li>
+                    <a href="#sidebar-tab-4"><i class="fa fa-check"></i> 待办列表</a>
+                </li>            
+            </ul><!-- End .ext-tabs-sidebar -->
+            <div class="tab-content">
+                <div id="sidebar-tab-3" class="tab-pane active">
+
+                    <!-- ********** -->
+                    <!-- NEW MODULE -->
+                    <!-- ********** -->
+                            
+                    <div class="sidebar-module">                     
+                        <ul class="mini-list">
+                            <li>
+                                <img src="images/users/user-1.jpg" alt="" class="avatar"/>
+                                <ul>
+                                    <li><a href="#" class="bold">王丽丽</a></li>
+                                    <li><a href="#">dummyemail@mail.com</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="images/users/user-2.jpg" alt="" class="avatar"/>
+                                <ul>
+                                    <li><a href="#" class="bold">李雪健</a></li>
+                                    <li><a href="#">dummyemail@mail.com</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="images/users/user-3.jpg" alt="" class="avatar"/>
+                                <ul>
+                                    <li><a href="#" class="bold">王小花</a></li>
+                                    <li><a href="#">dummyemail@mail.com</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="images/users/user-4.jpg" alt="" class="avatar"/>
+                                <ul>
+                                    <li><a href="#" class="bold">赵萌儿</a></li>
+                                    <li><a href="#">dummyemail@mail.com</a></li>
+                                </ul>
+                            </li>                        
+                            <li>
+                                <img src="images/users/user-5.jpg" alt="" class="avatar"/>
+                                <ul>
+                                    <li><a href="#" class="bold">钱穆</a></li>
+                                    <li><a href="#">dummyemail@mail.com</a></li>
+                                </ul>
+                            </il>
+                            <li>
+                                <img src="images/users/user-6.jpg" alt="" class="avatar"/>
+                                <ul>
+                                    <li><a href="#" class="bold">孙可望</a></li>
+                                    <li><a href="#">dummyemail@mail.com</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="images/users/user-7.jpg" alt="" class="avatar"/>
+                                <ul>
+                                    <li><a href="#" class="bold">周武灵王</a></li>
+                                    <li><a href="#">dummyemail@mail.com</a></li>
+                                </ul>
+                            </li>                                                                                                
+                        </ul><!-- End .mini-list -->
+                    </div><!-- End .sidebar-module -->                                        
+                </div>
+                <div id="sidebar-tab-4" class="tab-pane">
+                
+                    <!-- ********** -->
+                    <!-- NEW MODULE -->
+                    <!-- ********** -->
+	                        
+                    <div class="sidebar-module"> 
+                        <div class="sidebar-todo">
+                            <div class="sidebar-todo-day">
+                                <h5>今天到期</h5>
+                                <ul>
+                                    <li>
+                                        <label class="line-through">启动项目三<input type="checkbox" name="" checked/><span></span></label>
+                                    </li>
+                                    <li>
+                                        <label>给客户邮寄发票<input type="checkbox" name=""/><span></span></label>
+                                    </li>
+                                    <li>
+                                        <label>给张总打电话<input type="checkbox" name=""/><span></span></label>
+                                    </li>
+                                    <li>
+                                        <label>和小花喝杯咖啡<input type="checkbox" name=""/><span></span></label>
+                                    </li>
+                                </ul>
+                            </div><!-- End .sidebar-todo-day --> 
+                            <div class="sidebar-todo-day">
+                                <h5>明天到期 <span class="indicator-pill">32</span></h5>
+                                <ul>
+                                    <li>
+                                        <label>和客户开沟通会议<input type="checkbox" name=""/><span></span></label>
+                                    </li>
+                                    <li>
+                                        <label>和李总打电话<input type="checkbox" name=""/><span></span></label>
+                                    </li>
+                                    <li>
+                                        <label class="line-through">买一部新手机<input type="checkbox" name="" checked/><span></span></label>
+                                    </li>
+                                </ul>
+                            </div><!-- End .sidebar-todo-day --> 
+                            <div class="sidebar-todo-day">
+                                <h5>下周到期</h5>
+                                <ul>
+                                    <li>
+                                        <label>启动项目六<input type="checkbox" name=""/><span></span></label>
+                                    </li>
+                                    <li>
+                                        <label>去广州出差<input type="checkbox" name=""/><span></span></label>
+                                    </li>
+                                </ul>
+                            </div><!-- End .sidebar-todo-day --> 
+                        </div><!-- End .sidebar-todo -->
+                    </div><!-- End .sidebar-module -->               
+                </div>
+            </div><!-- End .tab-content --> 
+            
+            <div class="sidebar-line"><!-- A seperator line --></div> 
+            
+            <!-- ********** -->
+            <!-- NEW MODULE -->
+            <!-- ********** -->
+                    
+            <div class="sidebar-module">
+                <div class="circular-stats">
+                    <div class="circular-stats-inner">					
+                        <div class="circular-stats-data">
+                            <strong>2779</strong>
+                            <span>+ 31%</span>
+                        </div>	
+                        <input class="knob" data-width="100" data-cursor="false" data-fgColor="#aaaaaa" data-bgColor="#cccccc" data-thickness=".20" 
+                        value="31" data-readOnly="true" data-angleOffset="-0" data-displayInput="false">
+                    </div>
+                </div><!-- End .circular-stats -->
+                <div class="circular-stats-infobox">
+                    <strong>今天内</strong>
+                    <span>总访问量</span>
+                    <a href="#" class="btn btn-default">详情</a>
+                </div><!-- End .circular-stats-infobox -->  
+                <div class="spacer-20"></div>
+                <div class="circular-stats">
+                    <div class="circular-stats-inner">					
+                        <div class="circular-stats-data">
+                            <strong>12899</strong>
+                            <span>+ 77%</span>
+                        </div>	
+                        <input class="knob" data-width="100" data-cursor="false" data-fgColor="#aaaaaa" data-bgColor="#cccccc" data-thickness=".20" 
+                        value="77" data-readOnly="true" data-angleOffset="-0" data-displayInput="false">
+                    </div>
+                </div><!-- End .circular-stats -->
+                <div class="circular-stats-infobox">
+                    <strong>本月内</strong>
+                    <span>总访问量</span>
+                    <a href="#" class="btn btn-default">详情</a>
+                </div><!-- End .circular-stats-infobox -->
+                <div class="spacer-20"></div>
+                <div class="circular-stats">
+                    <div class="circular-stats-inner">					
+                        <div class="circular-stats-data">
+                            <strong>82229</strong>
+                            <span>+ 89%</span>
+                        </div>	
+                        <input class="knob" data-width="100" data-cursor="false" data-fgColor="#aaaaaa" data-bgColor="#cccccc" data-thickness=".20" 
+                        value="89" data-readOnly="true" data-angleOffset="-0" data-displayInput="false">
+                    </div>
+                </div><!-- End .circular-stats -->
+                <div class="circular-stats-infobox">
+                    <strong>今年内</strong>
+                    <span>总访问量</span>
+                    <a href="#" class="btn btn-default">详情</a>
+                </div><!-- End .circular-stats-infobox -->           
+            </div><!-- End .sidebar-module --> 
+        </div><!-- End #sidebar-sec -->          
+                 
+        <div id="main" class="clearfix">
+        
+        <!-- ******************************************** 
+             * MAIN HEADER:                             *
+             *                                          *  
+             * the part which contains the breadcrumbs, *
+             * dropdown menus, toggle sidebar button    *
+             ******************************************** -->
+
+			<header id="header-main">
+            	<div class="header-main-top">
+                	<div class="pull-left">
+                    
+                    	<!-- * This is the responsive logo * --> 
+                                   
+                    	<a href="index.html" id="logo-small"><h4>后台系统管理</h4><h5>/DEMO门户页面</h5></a>
+                    </div>
+                    <div class="pull-right">
+                        
+                    	<!-- * This is the trigger that will show/hide the menu * -->
+                        <!-- * if the layout is in responsive mode              * -->
+                        
+						<a href="#" id="responsive-menu-trigger">
+                        	<i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div><!-- End #header-main-top --> 
+                <div class="header-main-bottom">
+                	<div class="pull-left">
+                    	<ul class="breadcrumb">
+                            <li><a href="#">仪表盘</a></li>
+                            <li><a href="#">媒体库</a></li>
+                            <li class="active">数据</li>
+                        </ul><!-- End .breadcrumb -->
+                    </div> 
+                    <div class="pull-right">
+                    	<p>版本号 Alpha 1.0.0</p>                        
+                    </div> 
+                </div><!-- End #header-main-bottom -->            
+            </header><!-- End #header-main --> 
+        
+            <div id="content" class="clearfix">
+
+            <!-- ********************************************
+                 * HEADER SEC:                              *
+                 *                                          *   
+                 * the part which contains the page title,  *
+                 * buttons and dropdowns.                   *
+                 ******************************************** -->
+                
+                <header id="header-sec"> 
+                	<div class="inner-padding"> 
+                        <div class="pull-left">
+                            <h2>仪表盘</h2>                 
+                        </div> 
+                        <div class="pull-right">
+                            <div class="dropdown">
+                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-comments"></i>
+                                    <span class="indicator-dot">3</span>
+                                </a>
+                                <div role="menu" class="dropdown-menu pull-center ext-dropdown-comments">
+                                    <div class="ext-dropdown-header">
+                                        <i class="fa fa-comments"></i> 
+                                        <h5>通知消息</h5>
+                                        <a href="#" class="btn btn-default btn-sm delete-master"><i class="fa fa-trash-o"></i></a>
+                                        <span class="indicator-dot">3</span>
+                                    </div> 
+                                    <div class="ext-dropdown-comments-content">
+                                        <div>
+                                            <img src="images/users/user-1.jpg" alt="" class="avatar"/>
+                                            <a href="#">周一上午例会按时参加</a>
+                                            <ul>
+                                                <li><span>Posted by:</span> <a href="#">Steven</a></li>
+                                                <li><span>Date:</span> Dec 11, 2012</li>
+                                                <li>
+                                                    <span>Actions:</span> 
+                                                    <a href="#">Read</a> -
+                                                    <a href="#" class="delete">Delete</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <img src="images/users/user-4.jpg" alt="" class="avatar"/>
+                                            <a href="#">报销简易流程指南</a>
+                                            <ul>
+                                                <li><span>Posted by:</span> <a href="#">Linda</a></li>
+                                                <li><span>Date:</span> Dec 3, 2012</li>
+                                                <li>
+                                                    <span>Actions:</span> 
+                                                    <a href="#">Read</a> -
+                                                    <a href="#" class="delete">Delete</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <img src="images/users/user-6.jpg" alt="" class="avatar"/>
+                                            <a href="#">分享: 天津爆炸启示录</a>
+                                            <ul>
+                                                <li><span>Posted by:</span> <a href="#">Debra Hopper</a></li>
+                                                <li><span>Date:</span> Nov 18, 2012</li>
+                                                <li>
+                                                    <span>Actions:</span>  
+                                                    <a href="#">Read</a> -
+                                                    <a href="#" class="delete">Delete</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <span>没有评论</span>                                                                     	
+                                    </div>
+                                    <div class="ext-dropdown-footer">
+                                        <p>Updated: 11/12/2012 - 14:12</p>
+                                        <a href="#" class="btn btn-default btn-sm"><i class="fa fa-caret-right"></i></a>
+                                    </div> 
+                                </div>
+                            </div><!-- End .dropdown -->            
+                            <div class="btn-group">
+                                <a class="btn btn-default" href="#">
+                                    <i class="fa fa-star"></i>
+                                </a>                                         
+                                <a class="btn btn-default" href="#" id="modal-update-trigger">
+                                弹出提示框
+                                </a>
+                                <a class="btn btn-default" href="#">
+                                    <i class="fa fa-cog"></i>
+                                </a>
+                            </div><!-- End .btn-group -->
+                            <div class="dropdown">
+                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-inbox"></i>
+                                    <span class="indicator-dot">3</span>
+                                </a>
+                                <div role="menu" class="dropdown-menu pull-right ext-dropdown-inbox">
+                                    <div class="ext-dropdown-header">
+                                        <h5>收信箱</h5>
+                                        <a href="#" class="btn btn-default btn-sm delete-master"><i class="fa fa-trash-o"></i></a>
+                                        <span class="indicator-dot">3</span>
+                                    </div> 
+                                    <div class="ext-dropdown-inbox-content">
+                                        <div>
+                                            <a href="#">你收到我的信件了吗?</a>
+                                            <ul class="nav">
+                                                <li><span>Send by:</span> <a href="#">王丽丽</a></li>
+                                                <li><span>Date:</span> Dec 12, 2012 - 14:03:09</li>
+                                                <li>
+                                                    <span>Actions:</span> 
+                                                    <a href="#">Reply</a> - 
+                                                    <a href="#">Read</a> -
+                                                    <a href="#">Spam</a> -  
+                                                    <a href="#" class="delete">Delete</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <a href="#">周日员工活动通信</a>
+                                            <ul class="nav">
+                                                <li><span>Send by:</span> <a href="#">李斯</a></li>
+                                                <li><span>Date:</span> Dec 3, 2012 - 22:44:12</li>
+                                                <li>
+                                                    <span>Actions:</span> 
+                                                    <a href="#">Reply</a> - 
+                                                    <a href="#">Read</a> -
+                                                    <a href="#">Spam</a> -  
+                                                    <a href="#" class="delete">Delete</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <a href="#">全员营销总动员</a>
+                                            <ul class="nav">
+                                                <li><span>Send by:</span> <a href="#">赵三叔</a></li>
+                                                <li><span>Date:</span> Dec 11, 2012 - 10:53:59</li>
+                                                <li>
+                                                    <span>Actions:</span> 
+                                                    <a href="#">Reply</a> - 
+                                                    <a href="#">Read</a> -
+                                                    <a href="#">Spam</a> -  
+                                                    <a href="#" class="delete">Delete</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <span>没有新信件</span>                                                                      	
+                                    </div>
+                                    <div class="ext-dropdown-footer">
+                                        <div class="progress bar-small">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                        <p>60%</p>
+                                        <a href="#" class="btn btn-default btn-sm"><i class="fa fa-caret-right"></i></a>
+                                    </div>                  
+                                </div>
+                            </div><!-- End .dropdown -->
+                         </div>
+                    </div><!-- End .inner-padding -->    
+            	</header><!-- End #header-sec --> 
+
+                <!-- ********************************************
+                     * WINDOW:                                  *
+                     *                                          *
+                     * the part which contains the main content *
+                     ******************************************** -->
+                                     
+                <div class="window">  
+                    <div class="actionbar">
+                        <div class="pull-left">
+                        	<a href="#" class="btn small-toggle-btn" data-toggle-sidebar="left"></a> 
+                            <a href="#" id="lockscreen-slider-trigger" class="btn">
+                                <i class="fa fa-lock"></i>&nbsp;  锁定屏幕
+                            </a> 
+                            <div class="dropdown">
+                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <img src="images/icons/flags/shiny/16/China.png" alt=""/>
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul role="menu" class="dropdown-menu ext-flags">
+                                    <li>
+                                        <a href="#">中文 <img src="images/icons/flags/shiny/16/China.png" alt=""/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">English <img src="images/icons/flags/shiny/16/United-Kingdom.png" alt=""/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">German <img src="images/icons/flags/shiny/16/Germany.png" alt=""/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">French <img src="images/icons/flags/shiny/16/France.png" alt=""/></a>
+                                    </li>
+                                </ul>
+                            </div>                          
+                        </div> 
+                        <div class="pull-right">
+                            <a href="#" class="btn small-toggle-btn" data-toggle-sidebar="right"></a>  
+                        </div>    
+                    </div><!-- End .actionbar-->
+                    <div class="row ext-raster">
+                    	<div class="col-sm-8">
+                            <div class="row ext-raster">
+                                <div class="col-sm-6">
+                                    <div class="inner-padding">
+                                        <div class="progress-project">
+                                            <div class="progress-project-header">
+                                                <h5>总体目标完成度</h5><span>90%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                                    <span class="sr-only">90% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div><!-- End .progress-project -->
+                                    </div><!-- End .inner-padding -->  
+                                </div>
+                                <span class="breakpoint-sm ext-raster-line-6"></span>
+                                <div class="col-sm-6">
+                                    <div class="grouped raster-3-blocks">
+                                        <div class="duo-val-block">
+                                            <span class="font-big">1778</span>
+                                            <span class="font-small">点击量</span>
+                                        </div><!-- End .duo-val-block -->
+                                        <div class="duo-val-block">
+                                            <span class="font-big">7545</span>
+                                            <span class="font-small">查看量</span>
+                                        </div><!-- End .duo-val-block -->
+                                        <div class="duo-val-block">
+                                            <span class="font-big">4459</span>
+                                            <span class="font-small">销售量</span>
+                                        </div><!-- End .duo-val-block -->
+                                    </div>                                              
+                                </div>
+                                <span class="ext-raster-line-bottom"></span>
+                            </div><!-- End .row -->
+                            <div class="row">
+                            	<div class="col-sm-12">
+                                    <div class="alert alert-block alert-inline-top alert-dismissable">
+                                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                        <h4>注意：</h4>
+                                        最近短信金融诈骗活动猖獗，请勿在ATM机上向陌生人转账。
+                                    </div>
+                                    <div class="inner-padding">
+										<div class="spacer-20"></div>
+                                    	<div id="chart-mixed-1" style="width:100%; height:240px"></div>
+                                        <div class="spacer-20"></div>
+                                        <div class="subheading">
+                                            <h3>小部件</h3>
+                                            <p>一系列的窗口小部件，其中可以呈现各种各样的内容信息.</p>
+                                        </div>
+         								<div class="row">
+                                
+                                            <!-- Start grid -->
+                                            
+                                            <section class="col-sm-12">
+                                                                                
+                                                <!-- New widget -->
+                                                
+                                                <div class="widget">
+                                                    <header>
+                                                        <h2>表格 &amp; 可滚动</h2>                                  
+                                                    </header>
+                                                    <div>
+                                                    <div class="scrollbar-y">  
+        												<table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" class="th-square"><label><input type="checkbox" class="checkbox-master"/><span></span></label></th>
+                                                                    <th scope="col">联系人</th>
+                                                                    <th scope="col">公司</th>
+                                                                    <th scope="col">操作</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><label><input type="checkbox"/><span></span></label></td>
+                                                                    <td>张三</td>
+                                                                    <td>光明乳业</td>
+                                                                    <td><a href="#">修改</a> | <a href="#">删除</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label><input type="checkbox"/><span></span></label></td>
+                                                                    <td>李四</td>
+                                                                    <td>百度科技</td>
+                                                                    <td><a href="#">修改</a> | <a href="#">删除</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label><input type="checkbox" class="ddd"/><span></span></label></td>
+                                                                    <td>王五</td>
+                                                                    <td>三一重工</td>
+                                                                    <td><a href="#">修改</a> | <a href="#">删除</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label><input type="checkbox"/><span></span></label></td>
+                                                                    <td>赵六</td>
+                                                                    <td>正吾科技</td>
+                                                                    <td><a href="#">修改</a> | <a href="#">删除</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label><input type="checkbox"/><span></span></label></td>
+                                                                    <td>钱七</td>
+                                                                    <td>三星电子</td>
+                                                                    <td><a href="#">修改</a> | <a href="#">删除</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label><input type="checkbox"/><span></span></label></td>
+                                                                    <td>孙八</td>
+                                                                    <td>苹果科技</td>
+                                                                    <td><a href="#">修改</a> | <a href="#">删除</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label><input type="checkbox"/><span></span></label></td>
+                                                                    <td>李九</td>
+                                                                    <td>明基电子</td>
+                                                                    <td><a href="#">修改</a> | <a href="#">删除</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label><input type="checkbox"/><span></span></label></td>
+                                                                    <td>常十</td>
+                                                                    <td>东山旅游</td>
+                                                                    <td><a href="#">修改</a> | <a href="#">删除</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        </div>
+                                                    </div>                               
+                                                </div><!-- End .widget -->
+                                                
+												<!-- New widget -->
+                                                
+                                                <div class="widget">
+                                                    <header>
+                                                        <h2>重点信息</h2>
+                                                    </header>
+                                                    <div>
+                                                       <div class="row ext-raster">
+                                                            <div class="col-sm-6">  
+                                                                <div class="inner-padding"> 
+                                                                比如胡金铨一辈子想拍「华工血泪史」，直至死在手术台上也没有完成。又比如吴宇森一辈子想拍「太平轮」。简单说来，「太平轮」是几十年前的老题材，我一直认为它最好是在八零年代拍，两岸刚和解，台湾开放探亲，伴随著老兵返乡的悲凄画面，太平轮堂堂登场，效果绝对会比二十一世纪才上映，效果要好一万倍。
+																
+                                                                </div>
+                                                            </div>
+                                                            <span class="breakpoint-sm ext-raster-line-6"></span>
+                                                            <div class="col-sm-6">  
+                                                                <div class="inner-padding"> 
+                                                                微博上很多人吐槽人艺的表演矫情造作，但多数人对原著还是推崇备至，审视与质疑的不太多。《雷雨》剧本我早年读过一二遍，周萍、繁漪、四凤、鲁妈……伸出两只手，八个人物我都掰得出来，情节也大致清楚：老头子多年前抛弃了老妈子，但孽缘未了，两人的儿子女儿又爱来爱去，两代人平行的恩怨之间又强势插入老头子的后老婆与大儿子之间的代际迷情以及一勺浓浓的时代佐料——老头子与离散儿子之间的阶级仇恨。最后的结局是奸情大揭发，人物死的死，疯的疯。
+																
+                                                                </div> 
+                                                            </div>
+                                                        </div> 
+                                                        <div class="row ext-raster">
+                                                            <span class="breakpoint-sm ext-raster-line-top"></span>
+                                                            <div class="col-sm-12">  
+                                                                <div class="inner-padding"> 
+																“我有过三个恋人。虽然她们都不知道。她们无意地却给了我许多：有的教我爱恋，有的敏我妒忌，我都感谢她们，谢她给我这苦甜的杯。她未嫁而死，她既嫁而死，她不知流落在什么地方，我无心去再找她了。养活在我的心窝里，三个恋人的她却还是健在，她的照相在母亲那里，我不敢去要了来看。她俩的面庞都忘记了，只留下一个朦胧的姿态，但是这朦胧的却最牵引我的情思。我愈是记不清了，我也就愈不能忘记她了。”（周作人《她们》）
+                                                                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End .widget --> 
+                                                
+                                                <!-- New widget -->
+                                                
+                                                <div class="widget">
+                                                    <header>
+                                                        <h2>地图</h2>
+                                                    </header>
+                                                    <div>
+                                                        <div class="alert alert-danger alert-inline-top">
+                                                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                            <i class="fa fa-warning"></i>Put me inside a widget...
+                                                        </div> 
+                                                        <div class="gmap3-flex" id="gmap3-1"></div>
+                                                    </div>
+                                                </div><!-- End .widget --> 
+                                            </section>
+                                        </div>
+                                        <div class="spacer-20"></div>
+                                        <div class="hr-totop"><span>Top</span></div>
+                                        <div class="spacer-40"></div>
+                                        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/120185136&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false"></iframe>
+                                    </div><!-- End .inner-padding -->  
+                                </div>
+                            </div><!-- End .row -->
+                        </div>
+                        <span class="breakpoint-sm ext-raster-line-8"></span>
+                        <div class="col-sm-4">
+                            <ul class="ext-tabs tabs-negative-position">
+                                <li class="active">
+                                    <a href="#content-tab-10">Tab 1</a>
+                                </li>
+                                <li>
+                                    <a href="#content-tab-11">Tab 2</a>
+                                </li>        
+                            </ul><!-- End .ext-tabs -->
+                            <div class="tab-content">
+                                <div id="content-tab-10" class="tab-pane active">
+                                    <div class="inner-padding">
+                                        <div class="subheading">
+                                            <h3>最近活动</h3>
+                                            <div class="btn-group pull-right">
+                                                <a href="#" class="btn btn-default btn-sm tooltip-top" title="Show less" id="as-min-trigger">
+                                                    <i class="fa fa-th-large"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-default btn-sm active tooltip-top" title="Show more" id="as-plus-trigger">
+                                                    <i class="fa fa-bars"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="activity-stream">
+                                            <div class="alert alert-danger">
+                                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                <i class="fa fa-exclamation-triangle"></i>请勿在公共场所吸烟.
+                                            </div>
+                                            <div class="activity-stream-item" id="as-item-2">
+                                                <img src="images/users/user-5.jpg" alt="" class="avatar"/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">单洪</a> <span class="busy-dot"></span> <small class="text-muted pull-right">1 分钟前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        给你留个小贴士：
+                                                    </div>
+                                                    <div class="activity-stream-sub">
+                                                    <i>曾经有位著名的运动员，多次在电视上透露小散的投资秘诀，你们怎么就不听呢。“没有买卖，就没有伤害”现在A股这种走法，要么空仓要么别动，上蹿下跳的都容易断腿而跪...</i> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="activity-stream-item" id="as-item-1">
+                                                <img src="images/users/user-1.jpg" alt="" class="avatar"/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">孙小虎</a> <span class="online-dot"></span> <small class="text-muted pull-right">21 分钟前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        接受了你的加好友请求。
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="activity-stream-item">
+                                                <img src="images/users/user-4.jpg" alt="" class="avatar"/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">马世友</a> <span class="label label-warning">Comment</span> <small class="text-muted pull-right">27分钟前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        在论坛中发表了一个帖子 <a href="#" class="highlight-link">论坛</a>.
+                                                    </div>
+                                                    <div class="activity-stream-sub">
+                                                        <p class="text-muted">
+                                                        俄罗斯文学真正开始在世界文学殿堂占据一席之地，是始于普希金。
+														在此之前的俄罗斯文学可以说是乏善可陈。
+														实际上，普希金也是现代俄罗斯文学的开山之人，被誉为是俄国文学之父，俄罗斯文学的太阳，从他开始，才有了世界所知晓的俄罗斯文学。</p>
+                                                        <div class="spacer-20"></div>
+                                                        <textarea class="auto-expand form-control noresizing" name="" placeholder="在这里发表评论..." data-autoexpand-size="100"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="activity-stream-item">
+                                                <img src="images/users/user-2.jpg" alt="" class="avatar"/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">李世民</a> <small class="text-muted pull-right">44分钟前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        给你发送了一条消息 [<a href="#" class="underline">查看</a>]
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="activity-stream-item">
+                                                <img src="images/users/user-3.jpg" alt="" class="avatar"/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">温赵轮</a> <small class="text-muted pull-right">21分钟前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        发布了一段视频.
+                                                    </div>
+                                                    <div class="activity-stream-sub">
+                                                        <div class="video-container">
+                                                            <iframe src="http://player.vimeo.com/video/17047198" width="300" height="150" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+                                                            <p><a href="http://vimeo.com/17047198">滚蛋吧，肿瘤君！</a>.</p>
+                                                        </div><!-- End .video-container --> 
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                            <div class="activity-stream-item">
+                                                <img class="media-object avatar" src="holder.js/40x40/karma-grey" alt=""/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">陈十</a> <small class="text-muted pull-right">1天前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        删除了他的头像照片.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="activity-stream-item">
+                                                <img src="images/users/user-6.jpg" alt="" class="avatar"/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">张三丰</a> <span class="offline-dot"></span> <small class="text-muted pull-right">10天前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        发布了一篇日志.
+                                                    </div>
+                                                    <div class="activity-stream-sub">
+                                                        <blockquote class="pull-right">
+                                                            <p>美国全国范围的失业率是18%，并将在奥巴马剩下的任期里继续恶化下去。</p>
+                                                            <small>川普 <cite title="Source Title">狂言</cite></small>
+                                                        </blockquote>
+                                                    </div>                                   
+                                                </div>
+                                            </div>
+                                            <div class="activity-stream-item">
+                                                <img src="images/users/user-7.jpg" alt="" class="avatar"/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">南怀仁</a> <small class="text-muted pull-right">11分钟前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        在论坛中发表的评论 <a href="#" class="highlight-link">评论</a>.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="activity-stream-item">
+                                                <img src="images/users/user-8.jpg" alt="" class="avatar"/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">简大神</a> <small class="text-muted pull-right">23天前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        修改了自己的账户信息.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="activity-stream-item">
+                                                <img src="images/users/user-9.jpg" alt="" class="avatar"/>
+                                                <div class="activity-stream-content">
+                                                    <div class="activity-stream-user">
+                                                        <a href="#" class="bold">贾森基</a> <small class="text-muted pull-right">1个月前</small>
+                                                    </div>
+                                                    <div class="activity-stream-title">
+                                                        增加了 <u>5张</u> 媒体库照片。
+                                                    </div>
+                                                    <div class="activity-stream-sub">
+                                                        <div class="thumbs-list thumbs-small">
+                                                            <ul>
+                                                                <li>
+                                                                    <img src="images/gallery/60x60/img-1.jpg" alt=""/>
+                                                                </li>
+                                                                <li>
+                                                                    <img src="images/gallery/60x60/img-2.jpg" alt=""/>
+                                                                </li>
+                                                                <li>
+                                                                    <img src="images/gallery/60x60/img-3.jpg" alt=""/>
+                                                                </li>
+                                                                <li>
+                                                                    <img src="images/gallery/60x60/img-4.jpg" alt=""/>
+                                                                </li>
+                                                                <li>
+                                                                    <img src="images/gallery/60x60/img-5.jpg" alt=""/>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                            </div>                                                                                           
+                                        </div><!-- End .activity-stream -->
+                                    </div><!-- End .inner-padding -->
+                                    
+                                    <!-- Lockscreen -->
+                                    <div class="lockscreen" id="lockscreen-target">
+                                        <div class="lockscreen-overlay"></div>
+                                        <div class="lockscreen-modal">
+                                            <div class="lockscreen-placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content-tab-11" class="tab-pane">
+                                    <div class="inner-padding">
+                                        <div class="subheading">
+                                            <h3>Form Elements</h3> 
+                                        </div>
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label for="ff-0">Full name: <span class="asterisk">*</span></label>
+                                                    <input type="text" class="form-control" placeholder="Basic text input" id="ff-0"/>
+                                                </div>
+                                            </div> 
+                                            <div class="spacer-20"></div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label for="ff-1">Username:</label>
+                                                    <div class="input-group">
+                                                        <input class="form-control" type="text" placeholder="Input group" id="ff-1"/>
+                                                        <span class="input-group-addon">.site.com</span>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="spacer-20"></div>  
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label for="ff-2">Email:</label>
+                                                    <input type="text" class="form-control input-lg" placeholder="Large input" id="ff-2"/>
+                                                    <div class="helper-text-box">
+                                                        <p>
+                                                        The input field above is a large field. Dont worry this is not the default size.
+                                                        </p>
+                                                    </div><!-- End .helper-text-box -->
+                                                </div>
+                                            </div> 
+                                            <div class="spacer-10"></div> 
+                                            <fieldset> 
+                                            	<legend>Checkbox</legend>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="stacked-labels">
+                                                            <label><input type="checkbox" name="tags" value="html5"/><span></span> HTML5</label>
+                                                            <label><input type="checkbox" name="tags" value="css3"/><span></span> CSS3</label>
+                                                            <label><input type="checkbox" name="tags" value="css3"/><span></span> Javascript</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="stacked-labels">
+                                                            <label><input type="checkbox" name="tags" value="html5"/><span></span> Database</label>
+                                                            <label><input type="checkbox" name="tags" value="css3"/><span></span> Search</label>
+                                                            <label><input type="checkbox" name="tags" value="css3"/><span></span> Projects</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="spacer-20"></div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label for="ff-2">First time here:</label>
+                                                    <select name="client" required class="form-control simpleselect">
+                                                        <option value="">-- Select option --</option>
+                                                        <option value="no">No</option>
+                                                        <option value="yes">Yes</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="spacer-20"></div>  
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label for="ff-2">Gender:</label>
+                                                    <div class="inline-labels">
+                                                        <label><input type="radio" name="gender" value="male" checked/><span></span> Male</label>
+                                                        <label><input type="radio" name="gender" value="female"/><span></span> Female</label>
+                                                        <label><input type="radio" name="gender" value="et"/><span></span> ET</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="spacer-20"></div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label for="ff-2">Message:</label>
+                                                    <textarea class="form-control" placeholder="Basic  textarea"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="spacer-20"></div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                	<label><input type="checkbox"/><span></span> Accept terms?</label>
+                                                   <button class="btn btn-default pull-right" type="submit">Send</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div><!-- End .inner-padding -->
+                            	</div>
+                            </div>
+                            <hr/>
+                            <div class="inner-padding">
+                            	<img src="images/gallery/img-4.jpg" class="img-responsive" alt="Responsive image">
+                            </div><!-- End .inner-padding -->
+                        </div>
+                        <span class="ext-raster-line-bottom"></span>
+                    </div>
+      				<div class="inner-padding">
+                        <div class="row"> 
+                            <div class="col-sm-12">
+                            	<div class="project-block">
+                                	<header>
+                                        <h3>项目简报一</h3>
+                                        <p class="text-muted">A simple project title</p>
+                                    </header>
+                                    <ul>
+                                    	<li>
+                                            <div class="pull-left">
+                                            Progress: 
+                                            </div>
+                                            <div class="pull-right">
+                                            29%
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            End date:
+                                            </div>
+                                            <div class="pull-right">
+                                            31 Feb
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Developer:
+                                            </div>
+                                            <div class="pull-right">
+                                            Steven
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Design by:
+                                            </div>
+                                            <div class="pull-right">
+                                            CreativeMilk
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <footer>
+                                        <div class="pull-left">
+                                        Status:
+                                        </div>
+                                        <div class="pull-right">
+                                        	<span class="label label-primary">Finished</span>
+                                        </div>
+                                    </footer>
+                                </div><!-- End .project-block -->
+                            	<div class="project-block">
+                                	<header>
+                                        <h3>项目简报二</h3>
+                                        <p class="text-muted">A simple project title</p>
+                                    </header>
+                                    <ul>
+                                    	<li>
+                                            <div class="pull-left">
+                                            Progress: 
+                                            </div>
+                                            <div class="pull-right">
+                                            66%
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            End date:
+                                            </div>
+                                            <div class="pull-right">
+                                            11 Jan
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Developer:
+                                            </div>
+                                            <div class="pull-right">
+                                            Wyatt
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Design by:
+                                            </div>
+                                            <div class="pull-right">
+                                            Apple
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <footer>
+                                        <div class="pull-left">
+                                        Status:
+                                        </div>
+                                        <div class="pull-right">
+                                       		<span class="label label-danger">Canceled</span>
+                                        </div>
+                                    </footer>
+                                </div><!-- End .project-block -->
+                            	<div class="project-block">
+                                	<header>
+                                        <h3>项目简报三</h3>
+                                        <p class="text-muted">A simple project title</p>
+                                    </header>
+                                    <ul>
+                                    	<li>
+                                            <div class="pull-left">
+                                            Progress: 
+                                            </div>
+                                            <div class="pull-right">
+                                            60%
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            End date:
+                                            </div>
+                                            <div class="pull-right">
+                                            21 Sep
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Developer:
+                                            </div>
+                                            <div class="pull-right">
+                                            Linda
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Design by:
+                                            </div>
+                                            <div class="pull-right">
+                                            Envato
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <footer>
+                                        <div class="pull-left">
+                                        Status:
+                                        </div>
+                                        <div class="pull-right">
+                                        	<span class="label label-success">Active</span>
+                                        </div>
+                                    </footer>
+                                </div><!-- End .project-block -->
+                            	<div class="project-block">
+                                	<header>
+                                        <h3>项目简报四</h3>
+                                        <p class="text-muted">A simple project title</p>
+                                    </header>
+                                    <ul>
+                                    	<li>
+                                            <div class="pull-left">
+                                            Progress: 
+                                            </div>
+                                            <div class="pull-right">
+                                            5%
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            End date:
+                                            </div>
+                                            <div class="pull-right">
+                                            10 Dec
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Developer:
+                                            </div>
+                                            <div class="pull-right">
+                                            Linda
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Design by:
+                                            </div>
+                                            <div class="pull-right">
+                                            CreativeMilk
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <footer>
+                                        <div class="pull-left">
+                                        Status:
+                                        </div>
+                                        <div class="pull-right">
+                                        	<span class="label label-default">Pending</span>
+                                        </div>
+                                    </footer>
+                                </div><!-- End .project-block -->
+                            	<div class="project-block">
+                                	<header>
+                                        <h3>项目简报五</h3>
+                                        <p class="text-muted">A simple project title</p>
+                                    </header>
+                                    <ul>
+                                    	<li>
+                                            <div class="pull-left">
+                                            Progress: 
+                                            </div>
+                                            <div class="pull-right">
+                                            100%
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            End date:
+                                            </div>
+                                            <div class="pull-right">
+                                            03 Feb
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Developer:
+                                            </div>
+                                            <div class="pull-right">
+                                            Jessica
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Design by:
+                                            </div>
+                                            <div class="pull-right">
+                                            CreativeMilk
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <footer>
+                                        <div class="pull-left">
+                                        Status:
+                                        </div>
+                                        <div class="pull-right">
+                                        	<span class="label label-warning">Reviewd</span>
+                                        </div>
+                                    </footer>
+                                </div><!-- End .project-block -->
+                            	<div class="project-block">
+                                	<header>
+                                        <h3>项目简报六</h3>
+                                        <p class="text-muted">A simple project title</p>
+                                    </header>
+                                    <ul>
+                                    	<li>
+                                            <div class="pull-left">
+                                            Progress: 
+                                            </div>
+                                            <div class="pull-right">
+                                            45%
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            End date:
+                                            </div>
+                                            <div class="pull-right">
+                                            1 Feb
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Developer:
+                                            </div>
+                                            <div class="pull-right">
+                                            Linda
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pull-left">
+                                            Design by:
+                                            </div>
+                                            <div class="pull-right">
+                                            Apple
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <footer>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                                <span class="sr-only">45% Complete</span>
+                                            </div>
+                                        </div>
+                               		</footer>
+                                </div><!-- End .project-block -->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End .window -->
+                
+                <!-- ********************************************
+                     * FOOTER MAIN:                             *
+                     *                                          *
+                     * the part which contains things like      * 
+                     * chat, buttons, copyright and             *
+                     * dropup menu(s).                          *
+                     ******************************************** -->
+                    
+                <footer id="footer-main" class="footer-sticky">
+                    <div class="footer-main-inner">
+                        <div class="pull-left">
+                            <p>版权所有 © 2015 正吾科技</p>
+                        </div> 
+                        <div class="pull-right">
+                            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-cogs"></i>
+                            </a>                            
+                            <div class="dropup" id="ext-dropdown-chat">
+                                <a class="btn dropdown-toggle ext-dropdown-chat-btn" data-toggle="dropdown" href="#">
+                                    <span class="online-dot"></span>
+                                    赵萌儿
+                                    <i class="fa fa-comments chat-blink-icon"></i>
+                                </a>                  
+                                <div class="ext-dropdown-chat dropdown-menu pull-right">
+                                    <div class="ext-dropdown-chat-inner">
+                                        <div class="ext-dropdown-header">
+                                            <i class="fa fa-comments"></i>
+                                            <h5>实时聊天消息</h5>
+                                            <a href="#" class="btn btn-default btn-sm ext-dropdown-chat-info-toggle">
+                                                <i class="fa fa-info-circle"></i>
+                                            </a>                            
+                                        </div>
+                                        <div class="ext-dropdown-chat-window scrollbar-y">
+                                            <div class="ext-dropdown-chat-msg">
+                                                <div class="seperator"><span>11/15/12</span></div>
+                                            </div>
+                                            <div class="ext-dropdown-chat-msg">
+                                                <div class="ext-dropdown-chat-avatar">
+                                                    <img src="images/users/user-5.jpg" alt=""/>
+                                                </div>
+                                                <div class="ext-dropdown-chat-user">
+                                                    <strong>赵萌儿:</strong>
+                                                    <span>17:23</span>
+                                                    <p>嗨，有人在线吗...</p>
+                                                </div>
+                                            </div>
+                                            <div class="ext-dropdown-chat-msg">
+                                                <div class="seperator"><span>11/17/12</span></div>
+                                            </div>
+                                            <div class="ext-dropdown-chat-msg">
+                                                <div class="ext-dropdown-chat-avatar">
+                                                    <img src="images/users/user-1.jpg" alt=""/>
+                                                </div>
+                                                <div class="ext-dropdown-chat-user">
+                                                    <strong>李信:</strong>
+                                                    <span>14:24</span>
+                                                    <p>管理员在此，有什么可以帮助的吗...</p>
+                                                </div>
+                                            </div>                                 
+                                            <div class="ext-dropdown-chat-msg">
+                                                <div class="ext-dropdown-chat-avatar">
+                                                    <img src="images/users/user-1.jpg" alt=""/>
+                                                </div>
+                                                <div class="ext-dropdown-chat-user">
+                                                    <strong>赵萌儿:</strong>
+                                                    <span>13:44</span>
+                                                    <p>我想增加一个新表单字段，不知道该怎么操作....</p>
+                                                </div>
+                                            </div>  
+                                            <div class="ext-dropdown-chat-msg">
+                                                <div class="ext-dropdown-chat-avatar">
+                                                    <img src="images/users/user-5.jpg" alt=""/>
+                                                </div>
+                                                <div class="ext-dropdown-chat-user">
+                                                    <strong>李信:</strong>
+                                                    <span>13:31</span>
+                                                    <p>很简单, 我来教你，你只要按这个  <a href="#">教程</a>步骤来就行...</p>
+                                                </div>
+                                            </div>
+                                            <div class="ext-dropdown-chat-msg">
+                                                <div class="ext-dropdown-chat-avatar">
+                                                    <img src="images/users/user-1.jpg" alt=""/>
+                                                </div>
+                                                <div class="ext-dropdown-chat-user">
+                                                    <strong>赵萌儿:</strong>
+                                                    <span>13:28</span>
+                                                    <p>好的，我看一下自己试试先...</p>
+                                                </div>
+                                            </div>
+                                            <div class="ext-dropdown-chat-msg">
+                                                <div class="ext-dropdown-chat-avatar">
+                                                    <img src="images/users/user-5.jpg" alt=""/>
+                                                </div>
+                                                <div class="ext-dropdown-chat-user">
+                                                    <strong>李信:</strong>
+                                                    <span>13:23</span>
+                                                    <p>如果遇到困难，随时联系我就好...</p>
+                                                </div>
+                                            </div>
+                                            <div class="ext-dropdown-chat-msg">
+                                                <div class="ext-dropdown-chat-avatar">
+                                                    <img src="images/users/user-1.jpg" alt=""/>
+                                                </div>
+                                                <div class="ext-dropdown-chat-user">
+                                                    <strong>赵萌儿:</strong>
+                                                    <span>13:28</span>
+                                                    <p>OK，谢谢你，这个帮助实在太及时了...</p>
+                                                </div>
+                                            </div>                       
+                                        </div>
+                                        <div class="ext-dropdown-chat-editor">
+                                            <textarea name="" class="form-control" placeholder="在这里输入你想说的话..."></textarea>
+                                        </div>
+                                        <div class="ext-dropdown-chat-info">
+                                            <h5>Welcome to the chat</h5>
+                                            <p>
+                                            Vivamus nisl lectus, venenatis eu sagittis id, dignissim quis justo. Etiam viverra vestibulum libero, 
+                                            vel vulputate risus pulvinar sit amet. Aenean a sollicitudin ante. Nam nec nisl eu nisl.
+                                            </p>
+                                            <div class="spacer-15"></div>
+                                            <p>
+                                            Maecenas in diam tempus velit viverra ultrices non eu urna. Maecenas nibh ante, consectetur non faucibus at, 
+                                            suscipit non est. Integer lobortis imperdiet mattis curabitur cursust.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End .dropup -->              
+                            <a href="#" class="btn" id="toggle-footer">
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                        </div> 
+                    </div><!-- End .footer-main-inner -->   
+                </footer><!-- End #footer-main -->  
+            </div><!-- End #content -->  
+    	</div><!-- End #main --> 
+    </div><!-- End #container --> 
+    
+    <!--Modal -->
+    <div class="modal fade" id="modal-update" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Update 13.2.1 available</h4>
+    		    </div>
+				<div class="modal-body">
+                    <div class="row" style="margin-bottom:-20px">
+                        <div class="col-xs-3">
+                            <i class="fa fa-download" style="font-size:120px;color:#ccc"></i>
+                        </div>
+                        <div class="col-xs-9">
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet molestie justo at pulvinar. 
+                            In hac habitasse platea dictumst. Proin accumsan, tellus quis varius molestie, mi dolor facilisis risus, 
+                            quis tristique neque augue eget nunc. Curabitur turpis sapien, lacinia in lacinia nec,
+                            </p>
+                            <div class="spacer-20"></div>
+                            <h4>Whats new in version 13.2.1</h4>
+                            <div class="spacer-20"></div>
+                            <ul>
+                                <li>Suspendisse laoreet molestie justo at pulvinar.</li>
+                                <li>Proin accumsan, tellus quis varius molestie, mi dolor facilisis risus.</li>
+                                <li>In hac habitasse platea dictumst. Proin accumsan, tellus quis varius molestie dolum ipkut. Curabitur turpis sapien lorem.</li>
+                                <li>Curabitur turpis sapien, lacinia in lacinia necr.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet molestie justo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary pull-right">Get it now</button>
+                </div>
+			</div>
+		</div>
+	 </div>
+     
+	 <!-- Lockscreen -->
+     <div class="lockscreen" id="lockscreen-slider">
+     	<div class="lockscreen-overlay"></div>
+        <div class="lockscreen-modal">
+        	<img src="images/users/user-1.jpg" alt="" class="lockscreen-avatar"/>
+			<div class="lockscreen-placeholder"></div>
+        </div>
+     </div>   
+</body>
+</html>
