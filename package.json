@@ -2,6 +2,6 @@
 	"name": "Admin Demo",
 	"version": "0.0.1",
 	"title": "Admin Demo",
-	"main": "kamaui/index.html",
+	"main": "karma.1.3/TEMPLATES/leftrightsidebar/dark/index.html",
 	"chromium-args": "--disable-devtools --child-clean-exit"
 }
