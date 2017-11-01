@@ -1,0 +1,187 @@
+<!DOCTYPE html> 
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Karma documentation</title>
+	
+    <meta name="description" content="Awesome Description Here">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/gcss.min.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+	<script src="js/prism.min.js"></script>  
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+    	$(document).ready(function($){
+			$('#toggle-menu').click(function(e){
+				$('body').addClass('sidebar-open').find('aside').animate({marginLeft: '0'},400);
+				e.preventDefault();	
+			});
+			$('body').click(function(e){
+				if($('body').hasClass('sidebar-open') && !$(e.target).is('aside') && !$(e.target).is('aside *')){
+					$('aside').animate({marginLeft: '-230px'},400, function(){
+						$('body').removeClass('sidebar-open');
+					});
+				}
+			});
+			$('.dir-view').find('span').click(function(e){
+				$(this).next('ul').slideToggle();
+			});
+		});
+		$(window).resize(function(){
+			$('body').removeClass('sidebar-open').find('aside').removeAttr('style');
+		});
+    </script>  
+</head>
+<body>
+<div id="container">     
+    <aside>    
+        <a href="index.html" id="logo">
+        	<h4>Karma</h4>
+            <h5>/docs</h5>
+        </a>
+        <img src="images/menu.png" alt="toggle menu" id="toggle-menu"/>
+        <nav>
+            <!-- Menu block -->
+            <h3>Welcome</h3>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="http://bit.ly/lRfS9c">Author</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+            <!-- Menu block -->
+            <h3>Structure</h3>
+            <ul> 
+                <li><a href="styling.html">Styling</a></li>
+                <li><a href="cssjsfiles.html">CSS/JS Files</a></li>         
+                <li><a href="templates.html">Templates</a></li>              
+            </ul>
+            <!-- Menu block -->
+            <h3>Help</h3>
+            <ul>
+                <li><a href="bookmark.html">Bookmark</a></li> 
+                <li><a href="changelog.html">Changelog</a></li>    
+                <li><a href="http://themeforest.net/user/CreativeMilk">Contact</a></li>       
+                <li><a href="knowledgebase.html">Knowledge Base</a></li> 
+                <li><a href="knownissues.html">Known Issues</a></li>             
+            </ul>
+            <!-- Menu block -->
+            <h3>Misc</h3>
+            <ul> 
+                <li><a href="responsive.html">Responsive</a></li>       
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="psd.html">PSD</a></li>                  
+            </ul>
+            <!-- Menu block -->
+            <h3>Custom Plugins</h3>
+            <ul>
+                <li><a href="autoexpand.html">Autoexpand</a></li>  
+                <li><a href="autosaveforms.html">Autosaveforms</a></li>      
+                <li><a href="bootstraptabsextend.html">Bootstraptabsextend</a></li>
+                <li><a href="chainedinputs.html">Chainedinputs</a></li>
+                <li><a href="checkboxtoggle.html">Checkboxtoggle</a></li>  
+                <li><a href="easyfiletree.html">Easyfiletree</a></li>      
+                <li><a href="lockscreen.html">Lockscreen</a></li>
+                <li><a href="mainmenu.html">Mainmenu</a></li>
+                <li><a href="nanogress.html">Nanogress</a></li>  
+                <li><a href="notify.html">Notify</a></li>      
+                <li><a href="powerwizard.html">Powerwizard</a></li>
+                <li><a href="responsivehelper.html">Responsivehelper</a></li>      
+                <li><a href="responsivetables.html">Responsivetables</a></li>
+                <li><a href="showpassword.html">Showpassword</a></li>
+                <li><a href="simpleselect.html">Simpleselect</a></li>
+                <li><a href="tinycontextmenu.html">Tinycontextmenu</a></li>                    
+            </ul>
+            <!-- Menu block -->
+            <h3>Thrid-party Plugins</h3>
+            <ul>
+                <li class="active"><a href="overview.html">Overview</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>     
+            </ul>                          
+        </nav>
+    </aside>
+    <div id="content">
+        <div class="alert alert-warning alert-dismissable"><strong>Notice:</strong> always backup your files before updating a plugin!</div>
+		<div class="spacer-20"></div>
+    	<section class="hero-unit">
+        	<h1>Overview</h1>
+            <p>Not all of the plugins that we have used are custom build by us, so below a list of third-party plugins that we have used in this theme.</p>
+        </section>
+		<!-- Section -->
+        <section>
+            <h3>Overview</h3>
+            <p>A list of all third-party javascript/jQuery plugins.</p> 
+		</section>
+        <!-- Section -->
+        <section>
+            <ul>
+            	<li>
+                	<strong>Flot</strong> - <a href="http://www.flotcharts.org/">http://www.flotcharts.org/</a>
+            	</li>
+            	<li>
+                	<strong>FullCalendar</strong> - <a href="http://arshaw.com/fullcalendar/">http://arshaw.com/fullcalendar/</a>
+            	</li>
+            	<li>
+                	<strong>Gmap3</strong> - <a href="http://gmap3.net/">http://gmap3.net/</a>
+            	</li>
+            	<li>
+                	<strong>H5F</strong> - <a href="https://github.com/ryanseddon/H5F">https://github.com/ryanseddon/H5F</a>
+            	</li>
+            	<li>
+                	<strong>Hogan.js</strong> - <a href="http://twitter.github.io/hogan.js/">http://twitter.github.io/hogan.js/</a>
+            	</li>
+            	<li>
+                	<strong>Knob</strong> - <a href="http://anthonyterrien.com/knob/">http://anthonyterrien.com/knob/</a>
+            	</li>
+            	<li>
+                	<strong>jQuery Autosize</strong> - <a href="http://www.jacklmoore.com/autosize/">http://www.jacklmoore.com/autosize/</a>
+            	</li>
+            	<li>
+                	<strong>Magnific Popup</strong> - <a href="hhttp://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a>
+            	</li>
+            	<li>
+                	<strong>MixItUp</strong> - <a href="http://mixitup.io/">http://mixitup.io/</a>
+            	</li>
+            	<li>
+                	<strong>noUiSlider</strong> - <a href="http://refreshless.com/nouislider/">http://refreshless.com/nouislider/</a>
+            	</li>
+            	<li>
+                	<strong>Password Strength Indicator</strong> - <a href="http://matoilic.github.com/jquery.pwstrength">http://matoilic.github.com/jquery.pwstrength</a>
+            	</li>
+            	<li>
+                	<strong>TableSorter</strong> - <a href="http://mottie.github.io/tablesorter/">http://mottie.github.io/tablesorter/</a>
+            	</li>
+            	<li>
+                	<strong>vTicker</strong> - <a href="http://richhollis.github.io/vticker/">http://richhollis.github.io/vticker/</a>
+            	</li>
+            	<li>
+                	<strong>jQuery layout</strong> - <a href="http://layout.jquery-dev.net/index.cfm">http://layout.jquery-dev.net/index.cfm</a>
+            	</li>
+            	<li>
+                	<strong>Masonry</strong> - <a href="http://masonry.desandro.com/">http://masonry.desandro.com/</a>
+            	</li>
+            	<li>
+                	<strong>Modernizr</strong> - <a href="http://modernizr.com/">http://modernizr.com/</a>
+            	</li> 
+            	<li>
+                	<strong>Prism</strong> - <a href="http://prismjs.com/">http://prismjs.com/</a>
+            	</li>
+            	<li>
+                	<strong>jQuery Splitter</strong> - <a href="http://methvin.com/splitter/">http://methvin.com/splitter/</a>
+            	</li>
+            	<li>
+                	<strong>Tiny Scrollbar</strong> - <a href="http://baijs.nl/tinyscrollbar/">http://baijs.nl/tinyscrollbar/</a>
+            	</li>
+            </ul>
+		</section>
+        
+	</div>  
+</div>
+</body>
+</html>

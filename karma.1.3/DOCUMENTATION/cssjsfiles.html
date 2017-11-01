@@ -1,0 +1,176 @@
+<!DOCTYPE html> 
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Karma documentation</title>
+	
+    <meta name="description" content="Awesome Description Here">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/gcss.min.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+	<script src="js/prism.min.js"></script>  
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+    	$(document).ready(function($){
+			$('#toggle-menu').click(function(e){
+				$('body').addClass('sidebar-open').find('aside').animate({marginLeft: '0'},400);
+				e.preventDefault();	
+			});
+			$('body').click(function(e){
+				if($('body').hasClass('sidebar-open') && !$(e.target).is('aside') && !$(e.target).is('aside *')){
+					$('aside').animate({marginLeft: '-230px'},400, function(){
+						$('body').removeClass('sidebar-open');
+					});
+				}
+			});
+			$('.dir-view').find('span').click(function(e){
+				$(this).next('ul').slideToggle();
+			});
+		});
+		$(window).resize(function(){
+			$('body').removeClass('sidebar-open').find('aside').removeAttr('style');
+		});
+    </script>  
+</head>
+<body>
+<div id="container">     
+    <aside>    
+        <a href="index.html" id="logo">
+        	<h4>Karma</h4>
+            <h5>/docs</h5>
+        </a>
+        <img src="images/menu.png" alt="toggle menu" id="toggle-menu"/>
+        <nav>
+            <!-- Menu block -->
+            <h3>Welcome</h3>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="http://bit.ly/lRfS9c">Author</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+            <!-- Menu block -->
+            <h3>Structure</h3>
+            <ul> 
+                <li><a href="styling.html">Styling</a></li>
+                <li class="active"><a href="cssjsfiles.html">CSS/JS Files</a></li>         
+                <li><a href="templates.html">Templates</a></li>              
+            </ul>
+            <!-- Menu block -->
+            <h3>Help</h3>
+            <ul>
+                <li><a href="bookmark.html">Bookmark</a></li> 
+                <li><a href="changelog.html">Changelog</a></li>    
+                <li><a href="http://themeforest.net/user/CreativeMilk">Contact</a></li>       
+                <li><a href="knowledgebase.html">Knowledge Base</a></li> 
+                <li><a href="knownissues.html">Known Issues</a></li>             
+            </ul>
+            <!-- Menu block -->
+            <h3>Misc</h3>
+            <ul> 
+                <li><a href="responsive.html">Responsive</a></li>       
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="psd.html">PSD</a></li>                  
+            </ul>
+            <!-- Menu block -->
+            <h3>Custom Plugins</h3>
+            <ul>
+                <li><a href="autoexpand.html">Autoexpand</a></li>  
+                <li><a href="autosaveforms.html">Autosaveforms</a></li>      
+                <li><a href="bootstraptabsextend.html">Bootstraptabsextend</a></li>
+                <li><a href="chainedinputs.html">Chainedinputs</a></li>
+                <li><a href="checkboxtoggle.html">Checkboxtoggle</a></li>  
+                <li><a href="easyfiletree.html">Easyfiletree</a></li>      
+                <li><a href="lockscreen.html">Lockscreen</a></li>
+                <li><a href="mainmenu.html">Mainmenu</a></li>
+                <li><a href="nanogress.html">Nanogress</a></li>  
+                <li><a href="notify.html">Notify</a></li>      
+                <li><a href="powerwizard.html">Powerwizard</a></li>
+                <li><a href="responsivehelper.html">Responsivehelper</a></li>      
+                <li><a href="responsivetables.html">Responsivetables</a></li>
+                <li><a href="showpassword.html">Showpassword</a></li>
+                <li><a href="simpleselect.html">Simpleselect</a></li>
+                <li><a href="tinycontextmenu.html">Tinycontextmenu</a></li>                    
+            </ul>
+            <!-- Menu block -->
+            <h3>Thrid-party Plugins</h3>
+            <ul>
+                <li><a href="overview.html">Overview</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>     
+            </ul>                          
+        </nav>
+    </aside>
+    <div id="content">
+    	<section class="hero-unit">
+        	<h1>CSS/JS Files</h1>
+            <p>An overview of the CSS/JS files.</p>
+        </section>
+		<!-- Section -->
+        <section>
+            <h3>About</h3>
+            <p>We have put JS & CSS files into 3 groups, 1. custom, 2. thirdparty, 3. bootstrap.</p>
+			<p></p>
+            <dl>
+            	<dt>1. custom files</dt>
+                <dd>These are custom made plugins just for this theme. Infomation about these plugins can befound inside this documentation.</dd>
+            	<dt>2. thirdparty files</dt>
+                <dd>These are plugins not made by use. Infomation about these plugins can befound on external sites(plugin websites).</dd>
+            	<dt>3. Bootstrap files</dt>
+                <dd>These are plugins not made by us and they are build to fit Bootstrap. This Bootstrap group includes both core and thirdpraty files.
+                 Infomation about these plugins can befound on external sites(plugin websites).</dd>
+            </dl>
+		</section>
+		<!-- Section -->
+        <section>
+            <h3>CSS files</h3>
+            <p>Most CSS files dont need an explanation but there are a few that need one.</p>
+			<p></p>
+            <dl>
+            	<dt>base.css</dt>
+                <dd>The main CSS file. Notice: as bootstrap CSS files are added inside the <code>&lt;head&gt;</code> the rest of the CSS files are imported inside this file.</dd>
+            	<dt>boostrap-custom.css</dt>
+                <dd>This is the bootstrap reset CSS file, here you will find modified boostrap CSS code(inc bootstrap's third-party plugins). This way you dont have to worry that all is lost when you upgrade the Boostrap CSS core file.</dd>
+            	<dt>boostrap-extended.css</dt>
+                <dd>This is the boostrap extended CSS file, here you will find stuff thats build on top of Bootstrap.</dd>
+            	<dt>errorpages.css</dt>
+                <dd>The same as the base.css file but only used for the error pages.</dd>
+                <dt>helpers.css</dt>
+                <dd>Our small sort-of CSS framework, this file will provide sa couple of helper classes.</dd>
+            	<dt>login.css</dt>
+                <dd>The same as the base.css file but only used for the login pages.</dd>
+            	<dt>thirdparty-reset.css</dt>
+                <dd>This is the reset file for the third-party plugins. This way you dont have to worry that all is lost when you upgrade one of the plugins.</dd>
+            </dl>
+		</section>
+		<!-- Section -->
+        <section>
+            <h3>JS files</h3>
+            <p>Most JS files dont need an explanation but there are a few that need one.</p>
+			<p></p>
+            <dl>
+            	<dt>demo.js</dt>
+                <dd>Some extra jQuery run on start(index.html).</dd>
+            	<dt>login.js</dt>
+                <dd>Plugins used for the login pages.</dd>
+            	<dt>main.js</dt>
+                <dd>Custom made code.</dd> 
+            	<dt>plugins.js</dt>
+                <dd>Plugin settings can be found here.</dd>             
+            </dl>
+		</section>
+
+        <!-- Footer -->
+		<footer>
+        	<div class="float-left">Copyright © 2014 <a href="http://www.creativemilk.net">CreativeMilk</a></div>
+            <div class="float-right">Documentation v1.0.0</div>
+        </footer>
+	</div>  
+</div>
+</body>
+</html>

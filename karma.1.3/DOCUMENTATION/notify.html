@@ -1,0 +1,581 @@
+<!DOCTYPE html> 
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Karma documentation</title>
+	
+    <meta name="description" content="Awesome Description Here">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/gcss.min.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+	<script src="js/prism.min.js"></script>  
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+    	$(document).ready(function($){
+			$('#toggle-menu').click(function(e){
+				$('body').addClass('sidebar-open').find('aside').animate({marginLeft: '0'},400);
+				e.preventDefault();	
+			});
+			$('body').click(function(e){
+				if($('body').hasClass('sidebar-open') && !$(e.target).is('aside') && !$(e.target).is('aside *')){
+					$('aside').animate({marginLeft: '-230px'},400, function(){
+						$('body').removeClass('sidebar-open');
+					});
+				}
+			});
+			$('.dir-view').find('span').click(function(e){
+				$(this).next('ul').slideToggle();
+			});
+		});
+		$(window).resize(function(){
+			$('body').removeClass('sidebar-open').find('aside').removeAttr('style');
+		});
+    </script>  
+</head>
+<body>
+<div id="container">     
+    <aside>    
+        <a href="index.html" id="logo">
+        	<h4>Karma</h4>
+            <h5>/docs</h5>
+        </a>
+        <img src="images/menu.png" alt="toggle menu" id="toggle-menu"/>
+        <nav>
+            <!-- Menu block -->
+            <h3>Welcome</h3>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="http://bit.ly/lRfS9c">Author</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+            <!-- Menu block -->
+            <h3>Structure</h3>
+            <ul> 
+                <li><a href="styling.html">Styling</a></li>
+                <li><a href="cssjsfiles.html">CSS/JS Files</a></li>         
+                <li><a href="templates.html">Templates</a></li>              
+            </ul>
+            <!-- Menu block -->
+            <h3>Help</h3>
+            <ul>
+                <li><a href="bookmark.html">Bookmark</a></li> 
+                <li><a href="changelog.html">Changelog</a></li>    
+                <li><a href="http://themeforest.net/user/CreativeMilk">Contact</a></li>       
+                <li><a href="knowledgebase.html">Knowledge Base</a></li> 
+                <li><a href="knownissues.html">Known Issues</a></li>             
+            </ul>
+            <!-- Menu block -->
+            <h3>Misc</h3>
+            <ul> 
+                <li><a href="responsive.html">Responsive</a></li>       
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="psd.html">PSD</a></li>                  
+            </ul>
+            <!-- Menu block -->
+            <h3>Custom Plugins</h3>
+            <ul>
+                <li><a href="autoexpand.html">Autoexpand</a></li>  
+                <li><a href="autosaveforms.html">Autosaveforms</a></li>      
+                <li><a href="bootstraptabsextend.html">Bootstraptabsextend</a></li>
+                <li><a href="chainedinputs.html">Chainedinputs</a></li>
+                <li><a href="checkboxtoggle.html">Checkboxtoggle</a></li>  
+                <li><a href="easyfiletree.html">Easyfiletree</a></li>      
+                <li><a href="lockscreen.html">Lockscreen</a></li>
+                <li><a href="mainmenu.html">Mainmenu</a></li>
+                <li><a href="nanogress.html">Nanogress</a></li>  
+                <li class="active"><a href="notify.html">Notify</a></li>      
+                <li><a href="powerwizard.html">Powerwizard</a></li>
+                <li><a href="responsivehelper.html">Responsivehelper</a></li>      
+                <li><a href="responsivetables.html">Responsivetables</a></li>
+                <li><a href="showpassword.html">Showpassword</a></li>
+                <li><a href="simpleselect.html">Simpleselect</a></li>
+                <li><a href="tinycontextmenu.html">Tinycontextmenu</a></li>                    
+            </ul>
+            <!-- Menu block -->
+            <h3>Thrid-party Plugins</h3>
+            <ul>
+                <li><a href="overview.html">Overview</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>     
+            </ul>
+            <!-- Menu block -->
+            <h3>Other</h3>
+            <ul>
+                <li><a href="../#">Sources &amp; Credits</a></li>
+                <li><a href="../#">Other files by us</a></li>
+            </ul>                             
+        </nav>
+    </aside>
+    <div id="content">
+    	<div class="alert alert-warning alert-dismissable"><strong>Notice:</strong> as this is an old plugin we will not update this plugin anymore!</div>
+        <section class="hero-unit">
+        	<h1>Notify</h1>
+            <p>Basic checkbox mass toggle plugin. This plugin support the use of the SHIFT key to select multiple checkboxes, can be used with requirejs 
+            and it can be used with CSS3 input styling.</p>
+        </section>
+        <!-- Section -->
+        <section>
+            <h3>Files To Include</h3>
+            <p>Files that you have to include in your <code>&lt;head&gt;</code> section.</p> 
+            <pre class="line-numbers"><code class="language-markup">&lt;script src="js/plugins/notify.1.0.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="css/notify.css" /&gt;</code></pre>
+		</section>
+        <!-- Section -->
+        <section>
+            <h3>How To Use</h3>
+            <p>How to use HTML elements.</p> 
+            <pre class="line-numbers"><code class="language-markup">no markup</code></pre>
+        </section>
+        <!-- Section -->
+        <section>
+            <h3>Plugin Usage</h3>
+            <p>How to setup and use the plugin.</p> 
+            <pre class="line-numbers"><code class="language-javascript">//growl
+$.e_notify.growl({
+    title: 'Sticky growl',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel arcu est. Suspendisse laoreet nisl nec magna feugiat.',
+    image: 'images/users/user-1.jpg',
+    position: 'right-top',
+    delay: 0,
+    time: 2500,
+    speed: 400,
+    effect: 'fade',
+    sticky: true,
+    closable: true,
+    maxOpen:3,
+    className:'',
+    onShow: function(){},
+    onHide: function(){}
+});	 
+
+// remove all open growls
+$.e_notify.clear({
+    type: 'growl',
+    beforeClear: function(){alert('You can use a callback before removing...')},
+    afterClear: function(){alert('You can use a callback after removing...')}
+});
+
+// loader
+$.e_notify.loader({
+    image: 'images/loaders/type2/light/32.gif',
+    position: 'center',
+    imageSize: '32 | 32',
+    delay: 0,
+    time: 1200,
+    speed: 100,
+    opacity: 0.5,
+    onShow: function(){},
+    onHide: function(){}
+});	
+
+// notification
+$.e_notify.notification({
+    text: 'This notification message, has the custom class called "notification-warning".',
+    position: 'top',
+    target: '',
+    delay: 0,
+    time: 2500,
+    speed: 500,
+    effect: 'slide',
+    sticky: true,
+    closable: true,
+    className:'notification-warning',
+    onShow: function(){},
+    onHide: function(){}
+});
+
+// remove all open notifications
+$.e_notify.clear({
+	type: 'notification',
+    beforeClear: function(){alert('You can use a callback before removing...')},
+    afterClear: function(){alert('You can use a callback after removing...')}
+});</code></pre>
+		</section>
+        <!-- Section -->
+        <section>
+            <h3>Plugin Options(growl)</h3>
+            <p>A list of plugin options.</p> 
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Options</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Required</th>
+                        <th scope="col">Desctription</th>
+                        <th class="tbversion" scope="col">Since</th>
+                    </tr>                                            
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>title</td>
+                        <td>string</td>
+                        <td>yes*</td>
+                        <td>This is the title of the growl.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>text</td>
+                        <td>string</td>
+                        <td>yes*</td>
+                        <td>This is the text of the growl.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>image</td>
+                        <td>string</td>
+                        <td>no</td>
+                        <td>This is an optional image. The size of the image is 40 x 40.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>position</td>
+                        <td>string</td>
+                        <td>yes</td>
+                        <td>This is the position of the growl. You can choose from 4 different positions, right-top, right-bottom, left-top, left-bottom.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>delay</td>
+                        <td>number(integer)</td>
+                        <td>no</td>
+                        <td>Show a growl with a delay.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>time</td>
+                        <td>number(integer)</td>
+                        <td>yes**</td>
+                        <td>This is the time that a growl is visible.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>speed</td>
+                        <td>number(integer)</td>
+                        <td>yes</td>
+                        <td>This is the speed of the of the effect.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>effect</td>
+                        <td>string</td>
+                        <td>yes</td>
+                        <td>The type of effect.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>sticky</td>
+                        <td>boolean</td>
+                        <td>no</td>
+                        <td>You can set a growl to sticky mode, this means the growl wont be removed after xxx seconds.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>closable</td>
+                        <td>boolean</td>
+                        <td>yes</td>
+                        <td>Allow users to remove the growl.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>maxOpen</td>
+                        <td>number(integer)</td>
+                        <td>no</td>
+                        <td>You can set per growl the number of open growls per placeholder(position).</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>className</td>
+                        <td>string</td>
+                        <td>no</td>
+                        <td>You can style the growl by using a custom classname.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>onShow</td>
+                        <td>function</td>
+                        <td>no</td>
+                        <td>Run a function on show of a growl.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>onHide</td>
+                        <td>function</td>
+                        <td>no</td>
+                        <td>Run a function on hide of a growl(auto hide or manual removing).</td>
+                        <td>1.0</td>
+                    </tr>                                                                                            
+               </tbody> 
+               <tfoot>
+                   <tr>
+                        <td colspan="5">* a growl always needs a title <b>or</b> text, the rest can be removed. ** the time isn't required if you set the option 'sticky' to true.
+                        </td>
+                    </tr>                                            
+               </tfoot>                                                                                                                                              
+            </table>
+        </section>
+		<!-- Section -->
+        <section>
+            <h3>Plugin Options(loader)</h3>
+            <p>A list of plugin options.</p> 
+            <table>
+                <thead>
+                      <tr>
+                          <th scope="col">Options</th>
+                          <th scope="col">Type</th>
+                          <th scope="col">Required</th>
+                          <th scope="col">Desctription</th>
+                          <th class="tbversion" scope="col">Since</th>
+                      </tr>                                            
+                  </thead> 
+                  <tbody>
+                      <tr>
+                          <td>image</td>
+                          <td>string</td>
+                          <td>no</td>
+                          <td>You can choose your own loader image.</td>
+                          <td>1.0</td>
+                      </tr> 
+                      <tr>
+                          <td>position</td>
+                          <td>string</td>
+                          <td>yes</td>
+                          <td>This is the position of the growl. You can choose from 5 different positions, right-top, right-bottom, left-top, left-bottom, center.</td>
+                          <td>1.0</td>
+                      </tr> 
+                      <tr>
+                          <td>imageSize</td>
+                          <td>string</td>
+                          <td>yes</td>
+                          <td>This is the dimension of the image 'height | width'.</td>
+                          <td>1.0</td>
+                      </tr>                                                 
+                      <tr>
+                          <td>delay</td>
+                          <td>number(integer)</td>
+                          <td>no</td>
+                          <td>Show the loader with a delay.</td>
+                          <td>1.0</td>
+                      </tr> 
+                      <tr>
+                          <td>time</td>
+                          <td>number(integer)</td>
+                          <td>yes</td>
+                          <td>This is the time that the loader is visible.</td>
+                          <td>1.0</td>
+                      </tr>
+                      <tr>
+                          <td>speed</td>
+                          <td>number(integer)</td>
+                          <td>yes</td>
+                          <td>This is the speed of the of the effect.</td>
+                          <td>1.0</td>
+                      </tr> 
+                      <tr>
+                          <td>opacity</td>
+                          <td>number(float)</td>
+                          <td>yes</td>
+                          <td>This is the opacity of the overlay background.</td>
+                          <td>1.0</td>
+                      </tr>
+                      <tr>
+                          <td>onShow</td>
+                          <td>function</td>
+                          <td>no</td>
+                          <td>Run a function on show of the loader.</td>
+                          <td>1.0</td>
+                      </tr> 
+                      <tr>
+                          <td>onHide</td>
+                          <td>function</td>
+                          <td>no</td>
+                          <td>Run a function on hide of the loader.</td>
+                          <td>1.0</td>
+                      </tr>                                                                                            
+                 </tbody>                                                                                                                                             
+            </table>
+        </section>
+        <!-- Section -->
+        <section>
+            <h3>Plugin Options(notification)</h3>
+            <p>A list of plugin options.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Options</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Required</th>
+                        <th scope="col">Desctription</th>
+                        <th class="tbversion" scope="col">Since</th>
+                    </tr>                                            
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>text</td>
+                        <td>string</td>
+                        <td>yes</td>
+                        <td>The text of the notification.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>position</td>
+                        <td>string</td>
+                        <td>yes*</td>
+                        <td>This is the position of the notification. You can choose from 2 different positions, top, bottom.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>target</td>
+                        <td>string</td>
+                        <td>no</td>
+                        <td>Instead of using a position you can use a target, this alows you to add a notification anywhere you want.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>delay</td>
+                        <td>number(integer)</td>
+                        <td>no</td>
+                        <td>Show the notification with a delay.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>time</td>
+                        <td>number(integer)</td>
+                        <td>yes</td>
+                        <td>This is the time that a notification is visible.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>speed</td>
+                        <td>number(integer)</td>
+                        <td>yes</td>
+                        <td>This is the speed of the of the effect.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>effect</td>
+                        <td>string</td>
+                        <td>yes</td>
+                        <td>This is the effect of the notification.</td>
+                        <td>1.0</td>
+                    </tr>
+                   <tr>
+                        <td>sticky</td>
+                        <td>boolean</td>
+                        <td>no</td>
+                        <td>You can set the notification to sticky mode, this means the notification wont be removed after xxx seconds.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>closable</td>
+                        <td>boolean</td>
+                        <td>yes</td>
+                        <td>Allow users to remove the notification.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>className</td>
+                        <td>string</td>
+                        <td>no</td>
+                        <td>You can style the notification by using a custom classname. We have already made the custom classes: notification-success, 
+                        notification-warning, notification-info, notification-error, notification-msg, notification-success-widget, notification-warning-widget, 
+                        notification-info-widget, notification-error-widget, notification-msg-widget. Notifications do have a default class.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>onShow</td>
+                        <td>function</td>
+                        <td>no</td>
+                        <td>Run a function on show of the notification.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>onHide</td>
+                        <td>function</td>
+                        <td>no</td>
+                        <td>Run a function on hide of the notification.</td>
+                        <td>1.0</td>
+                    </tr>                                                                                                                                             
+               </tbody> 
+               <tfoot>
+                    <tr>
+                        <td colspan="5">
+                        * you dont have to use the position option if you use a target.
+                        </td>
+                    </tr>                                           
+               </tfoot>                                                                                                                                              
+            </table>
+        </section>
+        <!-- Section -->
+        <section>
+            <h3>Plugin Callback Functions</h3>
+            <p>Below a list of callback function parameters.</p> 
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Function</th>
+                        <th scope="col">Parameter</th>
+                        <th scope="col">Returns</th>
+                        <th scope="col">Desctription</th>
+                        <th scope="col">Since</th>
+                    </tr>                                            
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>not available</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+		</section>
+        <!-- Section -->
+        <section>
+            <h3>Usage Data Atributes</h3>
+            <p>Data atrributes are used by some of our custom plugins to set/get data.</p> 
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Dataset</th>
+                        <th scope="col">Element</th>
+                        <th scope="col">Example</th>
+                        <th scope="col">Desctription</th>
+                        <th scope="col">Since</th>
+                    </tr>                                            
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>not available</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>                                           
+                </tbody>
+            </table>         
+        </section>
+        <!-- Section -->
+        <section>
+        	<h3>Globally And Per-Call Overridable Options</h3>
+            <p>This plugin has per-call(as the example above shows) and globally overridable options. Globally options can be used to override the default options, 
+            this is best used if you want to override the plugin options by default, 
+            this will prevent any issues with the plugin, as you dont have to change any thing in the plugin core it self.
+            </p>
+            <p><strong>How to use:</strong> <mark>$.fn.pluginName.key = 'value';</mark></p>
+        </section>
+        <!-- Footer -->
+		<footer>
+        	<div class="float-left">Copyright © 2014 <a href="http://www.creativemilk.net">CreativeMilk</a></div>
+            <div class="float-right">Documentation v1.0.0</div>
+        </footer>
+	</div>  
+</div>
+</body>
+</html>

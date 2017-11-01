@@ -1,0 +1,205 @@
+<!DOCTYPE html> 
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Karma documentation</title>
+	
+    <meta name="description" content="Awesome Description Here">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/gcss.min.css"/>
+    <link rel="stylesheet" href="css/gcss.min.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+	<script src="js/prism.min.js"></script>  
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+    	$(document).ready(function($){
+			$('#toggle-menu').click(function(e){
+				$('body').addClass('sidebar-open').find('aside').animate({marginLeft: '0'},400);
+				e.preventDefault();	
+			});
+			$('body').click(function(e){
+				if($('body').hasClass('sidebar-open') && !$(e.target).is('aside') && !$(e.target).is('aside *')){
+					$('aside').animate({marginLeft: '-230px'},400, function(){
+						$('body').removeClass('sidebar-open');
+					});
+				}
+			});
+			$('.dir-view').find('span').click(function(e){
+				$(this).next('ul').slideToggle();
+			});
+		});
+		$(window).resize(function(){
+			$('body').removeClass('sidebar-open').find('aside').removeAttr('style');
+		});
+    </script>  
+</head>
+<body>
+<div id="container">     
+    <aside>    
+        <a href="index.html" id="logo">
+        	<h4>Karma</h4>
+            <h5>/docs</h5>
+        </a>
+        <img src="images/menu.png" alt="toggle menu" id="toggle-menu"/>
+        <nav>
+            <!-- Menu block -->
+            <h3>Welcome</h3>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="http://bit.ly/lRfS9c">Author</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+            <!-- Menu block -->
+            <h3>Structure</h3>
+            <ul> 
+                <li><a href="styling.html">Styling</a></li>
+                <li><a href="cssjsfiles.html">CSS/JS Files</a></li>         
+                <li><a href="templates.html">Templates</a></li>              
+            </ul>
+            <!-- Menu block -->
+            <h3>Help</h3>
+            <ul>
+                <li><a href="bookmark.html">Bookmark</a></li> 
+                <li><a href="changelog.html">Changelog</a></li>    
+                <li><a href="http://themeforest.net/user/CreativeMilk">Contact</a></li>       
+                <li><a href="knowledgebase.html">Knowledge Base</a></li> 
+                <li class="active"><a href="knownissues.html">Known Issues</a></li>             
+            </ul>
+            <!-- Menu block -->
+            <h3>Misc</h3>
+            <ul> 
+                <li><a href="responsive.html">Responsive</a></li>       
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="psd.html">PSD</a></li>                  
+            </ul>
+            <!-- Menu block -->
+            <h3>Custom Plugins</h3>
+            <ul>
+                <li><a href="autoexpand.html">Autoexpand</a></li>  
+                <li><a href="autosaveforms.html">Autosaveforms</a></li>      
+                <li><a href="bootstraptabsextend.html">Bootstraptabsextend</a></li>
+                <li><a href="chainedinputs.html">Chainedinputs</a></li>
+                <li><a href="checkboxtoggle.html">Checkboxtoggle</a></li>  
+                <li><a href="easyfiletree.html">Easyfiletree</a></li>      
+                <li><a href="lockscreen.html">Lockscreen</a></li>
+                <li><a href="mainmenu.html">Mainmenu</a></li>
+                <li><a href="nanogress.html">Nanogress</a></li>  
+                <li><a href="notify.html">Notify</a></li>      
+                <li><a href="powerwizard.html">Powerwizard</a></li>
+                <li><a href="responsivehelper.html">Responsivehelper</a></li>      
+                <li><a href="responsivetables.html">Responsivetables</a></li>
+                <li><a href="showpassword.html">Showpassword</a></li>
+                <li><a href="simpleselect.html">Simpleselect</a></li>
+                <li><a href="tinycontextmenu.html">Tinycontextmenu</a></li>                    
+            </ul>
+            <!-- Menu block -->
+            <h3>Thrid-party Plugins</h3>
+            <ul>
+                <li><a href="overview.html">Overview</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>     
+            </ul>                          
+        </nav>
+    </aside>
+    <div id="content">
+    	<section class="hero-unit">
+        	<h1>Known issues</h1>
+            <p>An overview of known issues.</p>
+        </section>
+		<!-- Section -->
+        <section>
+            <h3>Known Issues</h3>
+            <table>
+            	<thead>
+                	<tr>
+                    	<th scope="col" style="width:50px">ID</th>
+                    	<th scope="col">Name</th>
+                        <th scope="col">Desc</th>
+                        <th scope="col">Browsers</th>
+                        <th scope="col" style="width:50px">Ref</th>
+                        <th scope="col" style="width:100px">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<tr>
+                    	<td>8</td>
+                    	<td>Responsive tables sorting</td>
+                        <td>When using the column manage dropdown the table layout will not go back to full-width.</td>
+                        <td>IE10</td>
+                        <td></td>
+                        <td>open</td>
+                    </tr>
+                	<tr>
+                    	<td>7</td>
+                    	<td>Animation issue index.html</td>
+                        <td>Showing to thumbnails will be delayed when switching back to full layout. This is probably an core issue.</td>
+                        <td>all</td>
+                        <td>1</td>
+                        <td>open</td>
+                    </tr>
+                	<tr>
+                    	<td>6</td>
+                    	<td>Bootstrap tabs extended plugin</td>
+                        <td>Cant load AJAX local.</td>
+                        <td>chrome</td>
+                        <td>1</td>
+                        <td>closed</td>
+                    </tr>
+                	<tr>
+                    	<td>5</td>
+                    	<td>Text displaying issues</td>
+                        <td>Headings with 20px values are having strange displaying issues(some letters are removed).</td>
+                        <td>chrome(32.0.1700.68 beta-m)</td>
+                        <td></td>
+                        <td>open</td>
+                    </tr>
+                	<tr>
+                    	<td>4</td>
+                    	<td>Lockscreen plugin</td>
+                        <td>Cant load formAction option when testing local.</td>
+                        <td>chrome</td>
+                        <td>1</td>
+                        <td>closed</td>
+                    </tr>
+                	<tr>
+                    	<td>3</td>
+                    	<td>Google maps geolocation</td>
+                        <td>Location cant be localised when testing local.</td>
+                        <td>chrome</td>
+                        <td>1</td>
+                        <td>closed</td>
+                    </tr>
+                	<tr>
+                    	<td>2</td>
+                    	<td>Portlets z-index</td>
+                        <td>When draggin a portlet into an other column the portlet will disappear.</td>
+                        <td>chrome(32.0.1700.68 beta-m)</td>
+                        <td></td>
+                        <td>open</td>
+                    </tr>
+                	<tr>
+                    	<td>1</td>
+                    	<td>AJAX loading issue</td>
+                        <td>Cant load local AJAX data.(browser restrictions)</td>
+                        <td>chrome/ie</td>
+                        <td></td>
+                        <td>closed</td>
+                    </tr>
+                </tbody>
+            </table>
+		</section>
+        <!-- Footer -->
+		<footer>
+        	<div class="float-left">Copyright © 2014 <a href="http://www.creativemilk.net">CreativeMilk</a></div>
+            <div class="float-right">Documentation v1.0.0</div>
+        </footer>
+	</div>  
+</div>
+</body>
+</html>

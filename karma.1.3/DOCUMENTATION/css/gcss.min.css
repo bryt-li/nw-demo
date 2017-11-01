@@ -1,0 +1,12 @@
+
+/*
+ * Name        : GCSS
+ * URI         :
+ * Description : Grid stylesheet.
+ * Version     : Version 0.0.1
+ * Author      : CreativeMilk
+ * Author URI  : www.creativemilk.net
+ * Updated     : 2013-12-26 14:15:02 UTC+02:00
+ * Copyright   : (c) 2012 CreativeMilk
+ */
+.g_row{zoom:1;margin:0 -20px}.g_row:before,.g_row:after{content:"";display:table}.g_row:after{clear:both}[class*=g_col],[class^=" g_col"]{float:left;min-height:1px;-webkit-box-sizing:border-box;-khtml-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;padding:0 20px}.g_col_1{width:100%}.g_col_2{width:50%}.g_col_3{width:33.33333%}.g_col_4{width:25%}.g_col_5{width:20%}.g_col_6{width:16.66666%}.g_col_7{width:14.28571%}.g_col_8{width:12.5%}.g_col_9{width:11.11111%}.g_col_10{width:10%}.g_col_11{width:9.0909%}.g_col_12{width:8.33333%}.g_col_13{width:7.6923%}.g_col_14{width:7.14285%}.g_col_15{width:6.66666%}.g_col_16{width:6.25%}.g_offset_14{margin-left:50%}.g_offset_13{margin-left:66.66667%}.g_offset_12{margin-left:75%}.g_offset_11{margin-left:80%}.g_offset_10{margin-left:83.33334%}.g_offset_9{margin-left:85.71429%}.g_offset_8{margin-left:87.5%}.g_offset_7{margin-left:88.88889%}.g_offset_6{margin-left:90%}.g_offset_5{margin-left:90.9091%}.g_offset_4{margin-left:91.66667%}.g_offset_3{margin-left:92.3077%}.g_offset_2{margin-left:92.85715%}.g_offset_1{margin-left:93.33334%}.g_gap_5 > *{padding:0 20px 0 2.5px}.g_gap_5 > :first-child{padding:0 2.5px 0 20px}.g_gap_10 > *{padding:0 20px 0 5px}.g_gap_10 > :first-child{padding:0 5px 0 20px}.g_gap_20 > *{padding:0 20px 0 10px}.g_gap_20 > :first-child{padding:0 10px 0 20px}.g_gap_30 > *{padding:0 20px 0 7.5px}.g_gap_30 > :first-child{padding:0 7.5px 0 20px}.g_gap_50 > *{padding:0 20px 0 25px}.g_gap_50 > :first-child{padding:0 25px 0 20px}

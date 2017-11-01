@@ -1,0 +1,300 @@
+<!DOCTYPE html> 
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Karma documentation</title>
+	
+    <meta name="description" content="Awesome Description Here">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/gcss.min.css"/>
+    <link rel="stylesheet" href="css/gcss.min.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+	<script src="js/prism.min.js"></script>  
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+    	$(document).ready(function($){
+			$('#toggle-menu').click(function(e){
+				$('body').addClass('sidebar-open').find('aside').animate({marginLeft: '0'},400);
+				e.preventDefault();	
+			});
+			$('body').click(function(e){
+				if($('body').hasClass('sidebar-open') && !$(e.target).is('aside') && !$(e.target).is('aside *')){
+					$('aside').animate({marginLeft: '-230px'},400, function(){
+						$('body').removeClass('sidebar-open');
+					});
+				}
+			});
+			$('.dir-view').find('span').click(function(e){
+				$(this).next('ul').slideToggle();
+			});
+		});
+		$(window).resize(function(){
+			$('body').removeClass('sidebar-open').find('aside').removeAttr('style');
+		});
+    </script>  
+</head>
+<body>
+<div id="container">     
+    <aside>    
+        <a href="index.html" id="logo">
+        	<h4>Karma</h4>
+            <h5>/docs</h5>
+        </a>
+        <img src="images/menu.png" alt="toggle menu" id="toggle-menu"/>
+        <nav>
+            <!-- Menu block -->
+            <h3>Welcome</h3>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="http://bit.ly/lRfS9c">Author</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+            <!-- Menu block -->
+            <h3>Structure</h3>
+            <ul> 
+                <li><a href="styling.html">Styling</a></li>
+                <li><a href="cssjsfiles.html">CSS/JS Files</a></li>         
+                <li class="active"><a href="templates.html">Templates</a></li>              
+            </ul>
+            <!-- Menu block -->
+            <h3>Help</h3>
+            <ul>
+                <li><a href="bookmark.html">Bookmark</a></li> 
+                <li><a href="changelog.html">Changelog</a></li>    
+                <li><a href="http://themeforest.net/user/CreativeMilk">Contact</a></li>       
+                <li><a href="knowledgebase.html">Knowledge Base</a></li> 
+                <li><a href="knownissues.html">Known Issues</a></li>             
+            </ul>
+            <!-- Menu block -->
+            <h3>Misc</h3>
+            <ul> 
+                <li><a href="responsive.html">Responsive</a></li>       
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="psd.html">PSD</a></li>                  
+            </ul>
+            <!-- Menu block -->
+            <h3>Custom Plugins</h3>
+            <ul>
+                <li><a href="autoexpand.html">Autoexpand</a></li>  
+                <li><a href="autosaveforms.html">Autosaveforms</a></li>      
+                <li><a href="bootstraptabsextend.html">Bootstraptabsextend</a></li>
+                <li><a href="chainedinputs.html">Chainedinputs</a></li>
+                <li><a href="checkboxtoggle.html">Checkboxtoggle</a></li>  
+                <li><a href="easyfiletree.html">Easyfiletree</a></li>      
+                <li><a href="lockscreen.html">Lockscreen</a></li>
+                <li><a href="mainmenu.html">Mainmenu</a></li>
+                <li><a href="nanogress.html">Nanogress</a></li>  
+                <li><a href="notify.html">Notify</a></li>      
+                <li><a href="powerwizard.html">Powerwizard</a></li>
+                <li><a href="responsivehelper.html">Responsivehelper</a></li>      
+                <li><a href="responsivetables.html">Responsivetables</a></li>
+                <li><a href="showpassword.html">Showpassword</a></li>
+                <li><a href="simpleselect.html">Simpleselect</a></li>
+                <li><a href="tinycontextmenu.html">Tinycontextmenu</a></li>                    
+            </ul>
+            <!-- Menu block -->
+            <h3>Thrid-party Plugins</h3>
+            <ul>
+                <li><a href="overview.html">Overview</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>     
+            </ul>                          
+        </nav>
+    </aside>
+    <div id="content">
+    	<section class="hero-unit">
+        	<h1>Templates</h1>
+            <p>Basic structure of the templates.</p>
+        </section>
+		<!-- Section -->
+        <section>
+            <h3>Template type's</h3>
+            <p>Below an overview of the templates that you can use.</p>
+            <ul>
+            	<li><a href="#leftrightsidebar">Left &amp; right sidebars</a></li>
+                <li><a href="#leftsidebar">Left sidebar</a></li>
+            </ul>
+		</section>
+        <!-- Section -->
+        <section id="leftrightsidebar">
+            <h3>Left &amp; right sidebars</h3>
+            <p>A <u>basic</u> structure overview of the left &amp; right sidebar template.</p>
+            <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt; 
+&lt;html class="no-js" lang="en"&gt;
+&lt;head&gt;
+	// css/scripts/meta/misc
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="container" class="clearfix"&gt;              
+		&lt;aside id="sidebar-main" class="sidebar"&gt;
+        	&lt;div class="sidebar-logo"&gt;
+            	&lt;a href="index.html" id="logo-big"&gt;&lt;h1&gt;karma&lt;/h1&gt;&lt;h2&gt;/webapp&lt;/h2&gt;&lt;/a&gt;
+            &lt;/div&gt;&lt;!-- End .sidebar-logo --&gt;
+            &lt;div class="sidebar-module"&gt; 
+                // module
+            &lt;/div&gt;&lt;!-- End .sidebar-module --&gt; 
+            &lt;div class="sidebar-line"&gt;&lt;!-- A seperator line --&gt;&lt;/div&gt;
+        &lt;/aside&gt;&lt;!-- End aside --&gt; 
+        &lt;div id="sidebar-sec" class="sidebar"&gt; 
+        	&lt;div class="sidebar-sec-top"&gt;&lt;/div&gt;
+            &lt;div class="sidebar-module"&gt; 
+                // module
+            &lt;/div&gt;&lt;!-- End .sidebar-module --&gt; 
+            &lt;div class="sidebar-line"&gt;&lt;!-- A seperator line --&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- End #sidebar-sec --&gt;               
+        &lt;div id="main" class="clearfix"&gt;
+			&lt;header id="header-main"&gt;
+            	&lt;div class="header-main-top"&gt;
+                	&lt;div class="pull-left"&gt;        
+                    	&lt;a href="index.html" id="logo-small"&gt;&lt;h4&gt;karma&lt;/h4&gt;&lt;h5&gt;/webapp&lt;/h5&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="pull-right"&gt;
+						&lt;a href="#" id="responsive-menu-trigger"&gt;
+                        	&lt;i class="fa fa-bars"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!-- End #header-main-top --&gt;
+                &lt;div class="header-main-bottom"&gt;
+                	&lt;div class="pull-left"&gt;
+                    	// breadcrumbs
+                    &lt;/div&gt;
+                    &lt;div class="pull-right"&gt;
+                    	// text
+                    &lt;/div&gt; 
+                &lt;/div&gt;&lt;!-- End #header-main-bottom --&gt;            
+            &lt;/header&gt;&lt;!-- End #header-main --&gt; 
+            &lt;div id="content" class="clearfix"&gt;                
+                &lt;header id="header-sec"&gt; 
+                	&lt;div class="inner-padding"&gt;       
+                    	&lt;div class="pull-left"&gt;
+                            // buttons/text/dropdown              
+                        &lt;/div&gt;
+                        &lt;div class="pull-right"&gt;
+                            // buttons/text/dropdown
+                    	&lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End .inner-padding --&gt;   
+            	&lt;/header&gt;&lt;!-- End #header-sec --&gt; 
+                &lt;div class="window"&gt;
+                    &lt;div class="actionbar"&gt;
+                        &lt;div class="pull-left"&gt;
+                        	// buttons/text/dropdown
+                        &lt;/div&gt; 
+                        &lt;div class="pull-right"&gt;
+                            // buttons/text/dropdown                      
+                        &lt;/div&gt;    
+                    &lt;/div&gt;&lt;!-- End .actionbar--&gt;                 
+                    &lt;div class="inner-padding"&gt;
+                    	// main content
+					&lt;/div&gt;&lt;!-- End .inner-padding --&gt;
+                &lt;/div&gt;&lt;!-- End .window --&gt;                    
+                &lt;footer id="footer-main" class="footer-sticky"&gt;
+                    &lt;div class="footer-main-inner"&gt;
+                        &lt;div class="pull-left"&gt;
+                            // buttons/text/dropdown
+                        &lt;/div&gt; 
+                        &lt;div class="pull-right"&gt;
+                            // buttons/text/dropdown
+                        &lt;/div&gt; 
+                    &lt;/div&gt;&lt;!-- End .footer-main-inner --&gt;   
+                &lt;/footer&gt;&lt;!-- End #footer-main --&gt; 
+            &lt;/div&gt;&lt;!-- End #content --&gt;  
+    	&lt;/div&gt;&lt;!-- End #main --&gt;       
+    &lt;/div&gt;&lt;!-- End #container --&gt; 
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+		</section>
+        <!-- Section -->
+        <section id="leftsidebar">
+            <h3>Left &amp; right sidebars</h3>
+            <p>A <u>basic</u> structure overview of the left &amp; right sidebar template.</p>
+            <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt; 
+&lt;html class="no-js" lang="en"&gt;
+&lt;head&gt;
+	// css/scripts/meta/misc
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="container" class="clearfix"&gt;              
+		&lt;aside id="sidebar-main" class="sidebar"&gt;
+        	&lt;div class="sidebar-logo"&gt;
+            	&lt;a href="index.html" id="logo-big"&gt;&lt;h1&gt;karma&lt;/h1&gt;&lt;h2&gt;/webapp&lt;/h2&gt;&lt;/a&gt;
+            &lt;/div&gt;&lt;!-- End .sidebar-logo --&gt;
+            &lt;div class="sidebar-module"&gt; 
+                // module
+            &lt;/div&gt;&lt;!-- End .sidebar-module --&gt; 
+            &lt;div class="sidebar-line"&gt;&lt;!-- A seperator line --&gt;&lt;/div&gt;
+        &lt;/aside&gt;&lt;!-- End aside --&gt;          
+        &lt;div id="main" class="clearfix"&gt;
+			&lt;header id="header-main"&gt;
+            	&lt;div class="header-main-top"&gt;
+                	&lt;div class="pull-left"&gt;        
+                    	&lt;a href="index.html" id="logo-small"&gt;&lt;h4&gt;karma&lt;/h4&gt;&lt;h5&gt;/webapp&lt;/h5&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="pull-right"&gt;
+						&lt;a href="#" id="responsive-menu-trigger"&gt;
+                        	&lt;i class="fa fa-bars"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!-- End #header-main-top --&gt;
+                &lt;div class="header-main-bottom"&gt;
+                	&lt;div class="pull-left"&gt;
+                    	// breadcrumbs
+                    &lt;/div&gt;
+                    &lt;div class="pull-right"&gt;
+                    	// text
+                    &lt;/div&gt; 
+                &lt;/div&gt;&lt;!-- End #header-main-bottom --&gt;            
+            &lt;/header&gt;&lt;!-- End #header-main --&gt; 
+            &lt;div id="content" class="clearfix"&gt;                
+                &lt;header id="header-sec"&gt; 
+                	&lt;div class="inner-padding"&gt;       
+                    	&lt;div class="pull-left"&gt;
+                            // buttons/text/dropdown              
+                        &lt;/div&gt;
+                        &lt;div class="pull-right"&gt;
+                            // buttons/text/dropdown
+                    	&lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End .inner-padding --&gt;   
+            	&lt;/header&gt;&lt;!-- End #header-sec --&gt; 
+                &lt;div class="window"&gt;
+                    &lt;div class="actionbar"&gt;
+                        &lt;div class="pull-left"&gt;
+                        	// buttons/text/dropdown
+                        &lt;/div&gt; 
+                        &lt;div class="pull-right"&gt;
+                            // buttons/text/dropdown                      
+                        &lt;/div&gt;    
+                    &lt;/div&gt;&lt;!-- End .actionbar--&gt;                 
+                    &lt;div class="inner-padding"&gt;
+                    	// main content
+					&lt;/div&gt;&lt;!-- End .inner-padding --&gt;
+                &lt;/div&gt;&lt;!-- End .window --&gt;                    
+                &lt;footer id="footer-main" class="footer-sticky"&gt;
+                    &lt;div class="footer-main-inner"&gt;
+                        &lt;div class="pull-left"&gt;
+                            // buttons/text/dropdown
+                        &lt;/div&gt; 
+                        &lt;div class="pull-right"&gt;
+                            // buttons/text/dropdown
+                        &lt;/div&gt; 
+                    &lt;/div&gt;&lt;!-- End .footer-main-inner --&gt;   
+                &lt;/footer&gt;&lt;!-- End #footer-main --&gt; 
+            &lt;/div&gt;&lt;!-- End #content --&gt;  
+    	&lt;/div&gt;&lt;!-- End #main --&gt;       
+    &lt;/div&gt;&lt;!-- End #container --&gt; 
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+		</section>            
+		<footer>
+        	<div class="float-left">Copyright © 2014 <a href="http://www.creativemilk.net">CreativeMilk</a></div>
+            <div class="float-right">Documentation v1.0.0</div>
+        </footer>
+	</div>  
+</div>
+</body>
+</html>

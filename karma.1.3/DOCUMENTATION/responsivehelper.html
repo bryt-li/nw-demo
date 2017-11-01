@@ -1,0 +1,293 @@
+<!DOCTYPE html> 
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Karma documentation</title>
+	
+    <meta name="description" content="Awesome Description Here">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/gcss.min.css"/>
+    <link rel="stylesheet" href="css/prism.css"/>
+	<script src="js/prism.min.js"></script>  
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+    	$(document).ready(function($){
+			$('#toggle-menu').click(function(e){
+				$('body').addClass('sidebar-open').find('aside').animate({marginLeft: '0'},400);
+				e.preventDefault();	
+			});
+			$('body').click(function(e){
+				if($('body').hasClass('sidebar-open') && !$(e.target).is('aside') && !$(e.target).is('aside *')){
+					$('aside').animate({marginLeft: '-230px'},400, function(){
+						$('body').removeClass('sidebar-open');
+					});
+				}
+			});
+			$('.dir-view').find('span').click(function(e){
+				$(this).next('ul').slideToggle();
+			});
+		});
+		$(window).resize(function(){
+			$('body').removeClass('sidebar-open').find('aside').removeAttr('style');
+		});
+    </script>  
+</head>
+<body>
+<div id="container">     
+    <aside>    
+        <a href="index.html" id="logo">
+        	<h4>Karma</h4>
+            <h5>/docs</h5>
+        </a>
+        <img src="images/menu.png" alt="toggle menu" id="toggle-menu"/>
+        <nav>
+            <!-- Menu block -->
+            <h3>Welcome</h3>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="http://bit.ly/lRfS9c">Author</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+            <!-- Menu block -->
+            <h3>Structure</h3>
+            <ul> 
+                <li><a href="styling.html">Styling</a></li>
+                <li><a href="cssjsfiles.html">CSS/JS Files</a></li>         
+                <li><a href="templates.html">Templates</a></li>              
+            </ul>
+            <!-- Menu block -->
+            <h3>Help</h3>
+            <ul>
+                <li><a href="bookmark.html">Bookmark</a></li> 
+                <li><a href="changelog.html">Changelog</a></li>    
+                <li><a href="http://themeforest.net/user/CreativeMilk">Contact</a></li>       
+                <li><a href="knowledgebase.html">Knowledge Base</a></li> 
+                <li><a href="knownissues.html">Known Issues</a></li>             
+            </ul>
+            <!-- Menu block -->
+            <h3>Misc</h3>
+            <ul> 
+                <li><a href="responsive.html">Responsive</a></li>       
+                <li><a href="modules.html">Modules</a></li>
+                <li><a href="psd.html">PSD</a></li>                  
+            </ul>
+            <!-- Menu block -->
+            <h3>Custom Plugins</h3>
+            <ul>
+                <li><a href="autoexpand.html">Autoexpand</a></li>  
+                <li><a href="autosaveforms.html">Autosaveforms</a></li>      
+                <li><a href="bootstraptabsextend.html">Bootstraptabsextend</a></li>
+                <li><a href="chainedinputs.html">Chainedinputs</a></li>
+                <li><a href="checkboxtoggle.html">Checkboxtoggle</a></li>  
+                <li><a href="easyfiletree.html">Easyfiletree</a></li>      
+                <li><a href="lockscreen.html">Lockscreen</a></li>
+                <li><a href="mainmenu.html">Mainmenu</a></li>
+                <li><a href="nanogress.html">Nanogress</a></li>  
+                <li><a href="notify.html">Notify</a></li>      
+                <li><a href="powerwizard.html">Powerwizard</a></li>
+                <li class="active"><a href="responsivehelper.html">Responsivehelper</a></li>      
+                <li><a href="responsivetables.html">Responsivetables</a></li>
+                <li><a href="showpassword.html">Showpassword</a></li>
+                <li><a href="simpleselect.html">Simpleselect</a></li>
+                <li><a href="tinycontextmenu.html">Tinycontextmenu</a></li>                    
+            </ul>
+            <!-- Menu block -->
+            <h3>Thrid-party Plugins</h3>
+            <ul>
+                <li><a href="overview.html">Overview</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>     
+            </ul>                          
+        </nav>
+    </aside>
+    <div id="content">
+    	<section class="hero-unit">
+        	<h1>Responsivehelper</h1>
+            <p>Basic helper plugin which allows you to manage child elements, in most cases we used this plugin with the 'pull-left/pull-right' classes
+            to make sure that these elements if they are combined bigger(in width) than their parent that these child element will be display below each other without floating. You can see this 
+            on the toolbar page.</p>
+        </section>
+		<!-- Section -->
+        <section>
+            <h3>Files To Include</h3>
+            <p>Files that you have to include in your <code>&lt;head&gt;</code> section.</p> 
+            <pre class="line-numbers"><code class="language-markup">&lt;script src="js/plugins/responsivehelper.1.0.min.js"&gt;&lt;/script&gt;</code></pre>
+		</section>
+        <!-- Section -->
+        <section>
+            <h3>How To Use</h3>
+            <p>How to use HTML elements.</p> 
+            <pre class="line-numbers"><code class="language-markup">&lt;div class="wrapper"&gt;
+	&lt;div class="pull-left"&gt; content &lt;/div&gt;  
+	&lt;div class="pull-right"&gt; content &lt;/div&gt;       
+&lt;/div&gt;</code></pre>
+        </section>
+        <!-- Section -->
+        <section>
+            <h3>Plugin Usage</h3>
+            <p>How to setup and use the plugin.</p> 
+<pre class="line-numbers"><code class="language-javascript">//init
+$('.responsive-helper').responsiveHelper({
+    containerClass:'',
+    childrenClass: 'block',
+    inResponsiveMode:function(ui){
+    	//ui.item(element)
+    },
+    outResponsiveMode:function(ui){
+    	//ui.item(element)
+    }
+});
+
+//public methods
+$('.responsive-helper').responsiveHelper('destroy');</code></pre>
+		</section>
+        <!-- Section -->
+        <section>
+            <h3>Plugin Options</h3>
+            <p>A list of plugin options.</p> 
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Options</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Default</th>
+                        <th scope="col">Desctription</th>
+                        <th scope="col">Since</th>
+                    </tr>                                            
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>containerClass</td>
+                        <td><a href="http://en.wikipedia.org/wiki/JavaScript_syntax#String" target="_blank">string</a></td>
+                        <td></td>
+                        <td>The container or wrapper of the steps.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>childrenClass</td>
+                        <td><a href="http://en.wikipedia.org/wiki/JavaScript_syntax#String" target="_blank">string</a></td>
+                        <td>block</td>
+                        <td>This class will be added to the elements if the plugin go's into responsive mode.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>inResponsiveMode</td>
+                        <td><a href="http://en.wikipedia.org/wiki/JavaScript_syntax#Function" target="_blank">function</a></td>
+                        <td>function(ui){}</td>
+                        <td>Callback function that runs if the child elements are combined bigger than there parent.</td>
+                        <td>1.0</td>
+                    </tr> 
+                    <tr>
+                        <td>outResponsiveMode</td>
+                        <td><a href="http://en.wikipedia.org/wiki/JavaScript_syntax#Function" target="_blank">function</a></td>
+                        <td>function(ui){}</td>
+                        <td>Callback function that runs if the child elements are combined smaller than there parent.</td>
+                        <td>1.0</td>
+                    </tr>                                                                                                                      
+                </tbody>
+            </table>
+		</section>
+		<!-- Section -->
+        <section>
+            <h3>Plugin Callback Functions</h3>
+            <p>Below a list of callback function parameters.</p> 
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Function</th>
+                        <th scope="col">Parameter</th>
+                        <th scope="col">Returns</th>
+                        <th scope="col">Desctription</th>
+                        <th scope="col">Since</th>
+                    </tr>                                            
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>inResponsiveMode</td>
+                        <td>ui.step</td>
+                        <td>element</td>
+                        <td>This will return the parent element.</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>outResponsiveMode</td>
+                        <td>ui.step</td>
+                        <td>element</td>
+                        <td>This will return the parent element.</td>
+                        <td>1.0</td>
+                    </tr> 
+                </tbody>
+            </table>
+		</section>
+        <!-- Section -->
+        <section>
+            <h3>Usage Data Atributes</h3>
+            <p>Data atrributes are used by some of our custom plugins to set/get data.</p> 
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Dataset</th>
+                        <th scope="col">Element</th>
+                        <th scope="col">Example</th>
+                        <th scope="col">Desctription</th>
+                        <th scope="col">Since</th>
+                    </tr>                                            
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>not available</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>                                           
+                </tbody>
+            </table>         
+        </section>
+		<!-- Section -->
+        <section>
+            <h3>Public Methods</h3>
+            <p>A list of public methods.</p> 
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Method</th>
+                        <th scope="col">Parameter</th>
+                        <th scope="col">Desctription</th>
+                        <th scope="col">Since</th>
+                    </tr>                                            
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>destroy</td>
+                        <td>no</td>
+                        <td>Removes the plugin functionality completely. This will return the element back to its pre-init state.</td>
+                        <td>1.0</td>
+                    </tr>
+				</tbody>
+            </table>
+        </section>
+        <!-- Section -->
+        <section>
+        	<h3>Globally And Per-Call Overridable Options</h3>
+            <p>This plugin has per-call(as the example above shows) and globally overridable options. Globally options can be used to override the default options, 
+            this is best used if you want to override the plugin options by default, 
+            this will prevent any issues with the plugin, as you dont have to change any thing in the plugin core it self.
+            </p>
+            <p><strong>How to use:</strong> <mark>$.fn.pluginName.key = 'value';</mark></p>
+        </section>
+        <!-- Footer -->
+		<footer>
+        	<div class="float-left">Copyright © 2014 <a href="http://www.creativemilk.net">CreativeMilk</a></div>
+            <div class="float-right">Documentation v1.0.0</div>
+        </footer>
+	</div>  
+</div>
+</body>
+</html>
