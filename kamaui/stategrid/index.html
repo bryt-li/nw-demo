@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css"  href="lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/content.css" />
+  </head>
+  <body>
+    <div class="head">
+      <div onclick="quanping()" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div class="logo">
+        <img src="images/images/pic_01.png" alt="logo">
+      </div>
+      <div class="head-icon">
+        <img src="images/images/pic_04.png" alt="head-icon">
+      </div>
+      <div class="dropdown head-dropdown">
+        <button class="btn head-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          admin
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contain">
+      <div class="dropmenu">
+        <ul class="list-group main-nav">
+          <li class="list-group-item">
+            <div><span class="caret"></span>220kv 设备区</div>
+            <ul id="ul1">
+              <span class="caret"></span><li class="li1">220kv 开关柜</li>
+              <span class="caret"></span><li class="li1">220kv 站用变</li>
+              <span class="caret"></span><li class="li1">220kv 消弧线圈</li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <div><span class="caret"></span>110kv 设备区</div>
+            <ul id="ul1">
+              <span class="caret"></span><li class="li1">110kv 开关柜</li>
+              <span class="caret"></span><li class="li1">110kv 站用变</li>
+              <span class="caret"></span><li class="li1">110kv 消弧线圈</li>
+            </ul>
+          </li>
+          <li class="list-group-item current">
+            <div><span class="caret"></span>35kv 设备区</div>
+             <ul id="ul1">
+              <span class="caret"></span><li class="li1">35kv 开关柜</li>
+              <span class="caret"></span><li class="li1">35kv 站用变</li>
+              <span class="caret"></span><li class="li1">35kv 消弧线圈</li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <div><span class="caret"></span>主变设备区</div>
+            <ul id="ul1">
+              <span class="caret"></span><li class="li1">主变设备1</li>
+              <span class="caret"></span><li class="li1">主变设备2</li>
+              <span class="caret"></span><li class="li1">主变设备3</li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <div><span class="caret"></span>主控室</div>
+            <ul id="ul1">
+              <span class="caret"></span><li class="li1">主控室1</li>
+              <span class="caret"></span><li class="li1">主控室2</li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <div><span class="caret"></span>交直流电源</div>
+            <ul id="ul1">
+              <span class="caret"></span><li class="li1">220kv</li>
+              <span class="caret"></span><li class="li1">110kv</li>
+              <span class="caret"></span><li class="li1">35kv</li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <div><span class="caret"></span>其他设备</div>
+            <ul id="ul1">
+              <span class="caret"></span><li class="li1">其他设备1</li>
+              <span class="caret"></span><li class="li1">其他设备2</li>
+              <span class="caret"></span><li class="li1">其他设备3</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="content">
+        <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-generic" data-slide-to="0" class="ccc active"><</li>
+            <li data-target="#carousel-generic" data-slide-to="1" class="ccc">></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+
+            <div class="item active " id="need_canvas">
+
+            </div>
+            <div class="item" >
+              <img src="images/images/lunbo.jpg" alt="" id="contentWH">
+              <div class="carousel-caption">
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <!-- <a class="left carousel-control" href="#carousel-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a> -->
+        </div>
+        <div class="reminds">
+          <div class="remind">
+            <img src="images/images/pic_19.png" alt="">
+            <p>运行数据</p>
+          </div>
+          <div class="remind">
+            <img src="images/images/pic_21.png" alt="">
+            <p>警告数据</p>
+          </div>
+          <div class="remind">
+            <img src="images/images/pic_23.png" alt="">
+            <p>控制命令</p>
+          </div>
+        </div>
+      </div>
+      <div class="prob">
+        <div class="problem">
+          <img src="images/images/pic_09.png" alt="">
+          <h5>越限</h5>
+          <div>3# 主变 500kv 侧A像电流</div>
+          <div>1# 主变 2201A 相电流</div>
+        </div>
+        <div class="problem">
+          <img src="images/images/pic_13.png" alt="">
+          <h5>异常</h5>
+          <div>X主要故障</div>
+        </div>
+        <div class="problem">
+          <img src="images/images/pic_16.png" alt="">
+          <h5>事故</h5>
+          <div>3# 主变冷冻器全停跳闸</div>
+        </div>
+        <div class="problem">
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script src="lib/jquery-2.1.4/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript">
+      $(".main-nav>li>ul").slideUp();
+      $(".main-nav>li").off("click");
+      $(".main-nav>li").on("click",function(){
+        if($(this).children("ul").css("display") =="none"){
+          $(".main-nav>li").removeClass("current");
+          $(this).addClass("current");
+          $(".main-nav>li>ul").slideUp(500);
+          $(this).children("ul").stop().slideDown(500);
+        }
+      });
+
+       $(".main-nav>li").eq(2).trigger("click");
+  </script>
+  <script type="text/javascript">
+    function quanping(){
+      if (IsFull()) {
+        exitFull();
+      }else{
+        requestFullScreen();
+      }
+    }
+    function requestFullScreen(element) {
+        var de = document.querySelector(element) || document.documentElement;
+        if (de.requestFullscreen) {
+            de.requestFullscreen();
+        } else if (de.mozRequestFullScreen) {
+            de.mozRequestFullScreen();
+        } else if (de.webkitRequestFullScreen) {
+            de.webkitRequestFullScreen();
+        }
+    }
+    function exitFull() {
+       var exitMethod = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen ||  document.webkitExitFullscreen;
+         if (exitMethod) {
+          exitMethod.call(document);
+         }
+         else if (typeof window.ActiveXObject !== "undefined") {//for Internet Explorer
+          var wscript = new ActiveXObject("WScript.Shell");
+          if (wscript !== null) {
+           wscript.SendKeys("{F11}");
+          }
+       }
+    }
+    function IsFull() {
+        var fullscreenElement =
+            document.fullscreenEnabled
+            || document.mozFullscreenElement
+            || document.webkitFullscreenElement;
+        var fullscreenEnabled =
+            document.fullscreenEnabled
+            || document.mozFullscreenEnabled
+            || document.webkitFullscreenEnabled;
+        if (fullscreenElement == null)
+        {
+            return false;
+        } else {
+            return true;
+        }
+    }
+  </script>
+
+
+  <script src="js/three.js"></script>
+
+  <script src="js/read-model.js"></script>
+  <script src="js/DDSLoader.js"></script>
+  <script src="js/MTLLoader.js"></script>
+  <script src="js/OBJLoader.js"></script>
+  <script src="js/dat.gui.js"></script>
+  <script src="js/Detector.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/OrbitControls.js"></script>
+
+  <script src="js/model.js"></script>
+</html>

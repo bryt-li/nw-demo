@@ -1,0 +1,202 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+}
+.head{
+  width: 100%;
+  background: -webkit-linear-gradient(#8c8c8c, #524e4e); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#8c8c8c, #524e4e); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#8c8c8c, #524e4e); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#8c8c8c, #524e4e); /* 标准的语法 */
+}
+.head>div:first-child{
+  float: left;
+  cursor: default;
+  margin-top: 19px;
+  margin-left: 2%;
+  background: -webkit-linear-gradient(#7d7c7c, #5f5c5c)!important;
+  background: -o-linear-gradient(#7d7c7c, #5f5c5c)!important;
+  background: -moz-linear-gradient(#7d7c7c, #5f5c5c)!important;
+  background: linear-gradient(#7d7c7c, #5f5c5c)!important;
+  border: none;
+  color: white;
+}
+.head-icon{
+  float: right;
+  margin-top: -50px;
+  margin-right: 9%;
+}
+.head-dropdown{
+  float: right!important;
+  margin-top: -46px!important;
+  margin-right: 3%!important;
+}
+.head-btn{
+  background: -webkit-linear-gradient(#7d7c7c, #5f5c5c)!important; /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#7d7c7c, #5f5c5c)!important; /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#7d7c7c, #5f5c5c)!important; /* Firefox 3.6 - 15 */
+  background: linear-gradient(#7d7c7c, #5f5c5c)!important; /* 标准的语法 */
+  color: white;
+  border: none;
+}
+.contain{
+  background-color: #f1f3f2;
+  height: 638px;
+}
+.dropmenu{
+  margin-top: 10px;
+  float: left;
+  width: 17%;
+  height: 628px;
+  background-color: #777575;
+}
+.list-group-item{
+  width: 100%;
+  color: #666666!important;
+  padding: 0px!important;
+  border: none;
+}
+.list-group-item>div{
+  height: 40px;
+  font-weight: bold!important;
+  cursor: pointer;
+  padding:10px 15px;
+  background: -webkit-linear-gradient(#fff, #e3dcdc)!important; /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#fff, #e3dcdc)!important; /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#fff, #e3dcdc)!important; /* Firefox 3.6 - 15 */
+  background: linear-gradient(#fff, #e3dcdc)!important; /* 标准的语法 */
+}
+.list-group-item .caret{
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);		/* IE 9 */
+  -webkit-transform: rotate(-90deg);	/* Safari and Chrome */
+  -o-transform: rotate(-90deg);		/* Opera */
+  -moz-transform: rotate(-90deg);
+}
+.list-group-item:first-child{
+  border-top-left-radius: none!important;
+  border-top-right-radius: none!important;
+}
+.li1{
+  display: inline-block;
+  color: #b8b8b8;
+}
+#ul1>li{
+  display: inline-block;
+  width: 100%;
+  margin-top: 0px;
+  line-height: 20px;
+  margin-bottom: -2px;
+  padding-left: 30%;
+  border-bottom: 1px solid #dfe0e0;
+}
+#ul1>li:first-child{
+  margin-top: 7px;
+}
+ul#ul1>span.caret{
+  display: inline-block;
+  margin-bottom: -36px;
+  margin-left: 23%;
+  color: #b8b8b8;
+}
+.none{
+  display: none;
+}
+.content{
+  margin-left: 3%;
+  margin-top: 10px;
+  display: inline-block;
+  width: 48%;
+  height: 471.81px;
+}
+#carousel-generic{
+  width: 113%;
+  height:476.797px;
+}
+.carousel-inner .item img{
+  width: 100%;
+  height: 471.81px;
+}
+.carousel-indicators{
+  top: 20px!important;
+  left: 95%!important;
+}
+.carousel-indicators li{
+}
+.reminds{
+  width: 100%;
+}
+.remind{
+  display: inline-block;
+  margin-left: 7%;
+  margin-top: 15px;
+}
+.remind:first-child{
+  margin-left: 0;
+}
+.remind p{
+  text-align: center;
+  color: #666666;
+  font-size: 15px;
+  font-weight: bold;
+}
+.prob{
+  float: right;
+  width: 25%;
+  margin-top: 10px;
+  background-color: #fff;
+}
+.prob .problem{
+  height: 157px;
+  border-top: 1px solid #dfe0e0;
+}
+.prob .problem:first-child{
+  border-top: none;
+}
+.prob .problem img{
+  margin-left: 22%;
+  margin-top: 25px;
+}
+.prob .problem h5{
+  font-weight: bolder!important;
+  margin-left: 36%;
+  margin-top: -15px;
+}
+.prob .problem div{
+  margin-left: 36%;
+}
+.prob .problem:first-child{
+  color:#747474;
+}
+.prob .problem:nth-child(2){
+  color: #ff9000;
+}
+.prob .problem:nth-child(3){
+  color: #dc2f11;
+}
+.ccc{
+  width: 25px!important;
+  height: 20px!important;
+  background-color: #fff!important;
+  font-weight: bold;
+}
+.active{
+  color:#fff;
+  background-color: #191970!important;
+  box-shadow: 0 0 1px 1px;
+}
+.ccc:first-child{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.ccc:last-child{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: -4px;
+}
+
+
